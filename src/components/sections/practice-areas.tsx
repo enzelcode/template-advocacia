@@ -41,7 +41,7 @@ export function PracticeAreas() {
             </h2>
           </div>
           <p className="reveal text-sm text-muted-foreground max-w-xs">
-            Atuação técnica focada em Direito Trabalhista, com atendimento complementar em Família.
+            Atuação exclusiva em Direito Trabalhista, com foco na defesa do empregado.
           </p>
         </div>
 

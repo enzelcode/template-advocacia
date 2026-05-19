@@ -136,7 +136,7 @@ export const siteConfig: SiteConfig = {
     ctaSecondary: "Áreas de atuação",
     stats: [
       { value: "100%", label: "Foco em trabalhista" },
-      { value: "2 anos", label: "Prazo para ajuizar" },
+      { value: "Online", label: "Atendimento em todo Brasil" },
       { value: "24h", label: "Resposta no WhatsApp" },
     ],
   },
@@ -221,36 +221,6 @@ export const siteConfig: SiteConfig = {
           title: "Adicionais e Periculosidade",
           description:
             "Insalubridade, periculosidade e demais adicionais não pagos durante o vínculo empregatício.",
-        },
-      ],
-    },
-    {
-      id: "empregador",
-      label: "Empregador",
-      areas: [
-        {
-          icon: "FileText",
-          title: "Análise de Contratos",
-          description:
-            "Revisão de contratos de trabalho e prestação de serviços com foco em prevenir passivo trabalhista.",
-        },
-        {
-          icon: "Scale",
-          title: "Defesa em Reclamações",
-          description:
-            "Representação técnica da empresa em ações trabalhistas, com estratégia processual definida caso a caso.",
-        },
-        {
-          icon: "ShieldCheck",
-          title: "Consultoria Preventiva",
-          description:
-            "Orientação contínua sobre rotinas trabalhistas, demissões, jornada e gestão de pessoas.",
-        },
-        {
-          icon: "Handshake",
-          title: "Acordos e Mediação",
-          description:
-            "Negociação extrajudicial e acordos para resolver conflitos com menos custo e exposição.",
         },
       ],
     },
