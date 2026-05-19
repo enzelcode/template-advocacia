@@ -44,25 +44,25 @@ export function Hero() {
 
       <Container className="relative grid gap-14 lg:grid-cols-[1.5fr_1fr] lg:items-end">
         <div>
-          <div className="reveal flex items-center gap-4">
+          <div className="flex items-center gap-4">
             <span className="h-px w-12 bg-[color:var(--brand-gold)]" />
             <p className="text-[10px] font-medium uppercase tracking-[0.32em] text-[color:var(--brand-gold)] sm:text-[11px]">
               {hero.eyebrow}
             </p>
           </div>
 
-          <h1 className="reveal mt-8 font-heading text-[2.8rem] font-normal leading-[1.05] text-white sm:text-6xl lg:text-[5.4rem] text-balance">
+          <h1 className="mt-8 font-heading text-[2.8rem] font-normal leading-[1.05] text-white sm:text-6xl lg:text-[5.4rem] text-balance">
             {hero.headline}{" "}
             <span className="italic font-light text-[color:var(--brand-gold)]">
               {hero.headlineEmphasis}
             </span>
           </h1>
 
-          <p className="reveal mt-8 max-w-xl text-base leading-relaxed text-white/75 sm:text-lg text-pretty">
+          <p className="mt-8 max-w-xl text-base leading-relaxed text-white/75 sm:text-lg text-pretty">
             {hero.subheadline}
           </p>
 
-          <div className="reveal mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
+          <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
             <WhatsappButton label={hero.ctaPrimary} tone="gold" />
             {hero.ctaSecondary ? (
               <Link
@@ -81,7 +81,7 @@ export function Hero() {
 
         {/* Coluna direita: stats (sem balança no mobile) */}
         <div className="lg:pb-4">
-          <dl className="reveal grid grid-cols-3 gap-6 border-y border-white/15 py-6 lg:grid-cols-1 lg:gap-0 lg:divide-y lg:divide-white/15 lg:border-x-0 lg:border-y-0 lg:py-0">
+          <dl className="grid grid-cols-3 gap-6 border-y border-white/15 py-6 lg:grid-cols-1 lg:gap-0 lg:divide-y lg:divide-white/15 lg:border-x-0 lg:border-y-0 lg:py-0">
             {hero.stats.map((s) => (
               <div key={s.label} className="text-left lg:py-6">
                 <dt className="font-heading text-3xl font-normal text-white sm:text-4xl lg:text-5xl">
@@ -94,7 +94,7 @@ export function Hero() {
             ))}
           </dl>
 
-          <p className="reveal mt-8 flex items-center gap-3 text-[10px] uppercase tracking-[0.3em] text-white/55">
+          <p className="mt-8 flex items-center gap-3 text-[10px] uppercase tracking-[0.3em] text-white/55">
             <span className="h-px w-8 bg-[color:var(--brand-gold)]" />
             {oab}
           </p>
