@@ -1,0 +1,128 @@
+import Link from "next/link";
+import { siteConfig } from "@/config/site";
+import {
+  InstagramIcon,
+  LinkedInIcon,
+  FacebookIcon,
+} from "@/components/shared/brand-icons";
+import { Container } from "@/components/shared/container";
+
+const navLinks = [
+  { href: "#sobre", label: "Sobre" },
+  { href: "#areas", label: "Áreas" },
+  { href: "#processo", label: "Processo" },
+  { href: "#faq", label: "Perguntas" },
+  { href: "#contato", label: "Contato" },
+];
+
+export function Footer() {
+  const year = new Date().getFullYear();
+  const { social, contact } = siteConfig;
+
+  return (
+    <footer className="relative border-t border-border/70 bg-background">
+      <div aria-hidden className="bg-dots absolute inset-0 opacity-30" />
+      <Container className="relative py-16">
+        <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
+          {/* Brand */}
+          <div>
+            <p className="font-heading text-2xl font-normal text-[color:var(--brand-navy)]">
+              {siteConfig.name}
+            </p>
+            <p className="mt-2 text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
+              {siteConfig.oab}
+            </p>
+            <p className="mt-6 max-w-sm text-sm leading-relaxed text-muted-foreground text-pretty">
+              {siteConfig.description}
+            </p>
+
+            <div className="mt-8 flex items-center gap-3">
+              {social.instagram ? (
+                <Link
+                  href={social.instagram}
+                  aria-label="Instagram"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="grid size-10 place-items-center rounded-full border border-border/70 text-muted-foreground transition-all hover:border-[color:var(--brand-gold)] hover:text-[color:var(--brand-gold)]"
+                >
+                  <InstagramIcon className="size-4" />
+                </Link>
+              ) : null}
+              {social.linkedin ? (
+                <Link
+                  href={social.linkedin}
+                  aria-label="LinkedIn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="grid size-10 place-items-center rounded-full border border-border/70 text-muted-foreground transition-all hover:border-[color:var(--brand-gold)] hover:text-[color:var(--brand-gold)]"
+                >
+                  <LinkedInIcon className="size-4" />
+                </Link>
+              ) : null}
+              {social.facebook ? (
+                <Link
+                  href={social.facebook}
+                  aria-label="Facebook"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="grid size-10 place-items-center rounded-full border border-border/70 text-muted-foreground transition-all hover:border-[color:var(--brand-gold)] hover:text-[color:var(--brand-gold)]"
+                >
+                  <FacebookIcon className="size-4" />
+                </Link>
+              ) : null}
+            </div>
+          </div>
+
+          {/* Nav */}
+          <div>
+            <p className="text-[10px] uppercase tracking-[0.3em] text-[color:var(--brand-gold)]">
+              Navegação
+            </p>
+            <ul className="mt-5 space-y-3">
+              {navLinks.map((l) => (
+                <li key={l.href}>
+                  <a
+                    href={l.href}
+                    className="text-sm text-foreground/80 transition-colors hover:text-[color:var(--brand-navy)]"
+                  >
+                    {l.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contato */}
+          <div>
+            <p className="text-[10px] uppercase tracking-[0.3em] text-[color:var(--brand-gold)]">
+              Contato
+            </p>
+            <ul className="mt-5 space-y-3 text-sm text-foreground/80">
+              <li>{contact.phone}</li>
+              <li>
+                <a
+                  href={`mailto:${contact.email}`}
+                  className="transition-colors hover:text-[color:var(--brand-navy)]"
+                >
+                  {contact.email}
+                </a>
+              </li>
+              {contact.address ? (
+                <li className="text-muted-foreground">{contact.address}</li>
+              ) : null}
+            </ul>
+          </div>
+        </div>
+
+        <div className="mt-14 flex flex-col items-start justify-between gap-3 border-t border-border/70 pt-6 text-[11px] text-muted-foreground sm:flex-row sm:items-center">
+          <p>
+            © {year} {siteConfig.name}. Todos os direitos reservados.
+          </p>
+          <p className="uppercase tracking-[0.22em]">
+            Conforme provimento OAB nº 205/2021
+          </p>
+        </div>
+      </Container>
+    </footer>
+  );
+}
