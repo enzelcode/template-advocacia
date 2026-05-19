@@ -11,6 +11,12 @@ export type PracticeArea = {
   icon: string;
 };
 
+export type PracticeAreaGroup = {
+  id: string;
+  label: string;
+  areas: PracticeArea[];
+};
+
 export type ProcessStep = {
   step: string;
   title: string;
@@ -84,7 +90,7 @@ export type SiteConfig = {
     stat?: Stat;
   };
 
-  practiceAreas: PracticeArea[];
+  practiceAreas: PracticeAreaGroup[];
 
   process: ProcessStep[];
 
@@ -172,40 +178,76 @@ export const siteConfig: SiteConfig = {
 
   practiceAreas: [
     {
-      icon: "Briefcase",
-      title: "Verbas Rescisórias",
-      description:
-        "Cobrança de verbas não pagas: aviso prévio, férias, 13º, FGTS, multa e tudo o que é seu por direito após a demissão.",
+      id: "trabalhista",
+      label: "Trabalhista",
+      areas: [
+        {
+          icon: "Briefcase",
+          title: "Verbas Rescisórias",
+          description:
+            "Cobrança de verbas não pagas: aviso prévio, férias, 13º, FGTS, multa e tudo o que é seu por direito após a demissão.",
+        },
+        {
+          icon: "AlertTriangle",
+          title: "Demissão Injusta",
+          description:
+            "Análise da legalidade da demissão por justa causa e reversão quando houver irregularidade na conduta da empresa.",
+        },
+        {
+          icon: "Clock",
+          title: "Horas Extras e Adicionais",
+          description:
+            "Cobrança de horas extras, adicional noturno, periculosidade, insalubridade e intervalos intra/interjornada não respeitados.",
+        },
+        {
+          icon: "ShieldAlert",
+          title: "Assédio Moral",
+          description:
+            "Indenização por danos morais em casos de humilhação, perseguição, sobrecarga abusiva e situações degradantes no trabalho.",
+        },
+        {
+          icon: "FileX",
+          title: "Trabalho Sem Registro",
+          description:
+            "Reconhecimento de vínculo empregatício e cobrança retroativa de todas as verbas devidas pelo período trabalhado.",
+        },
+        {
+          icon: "Gavel",
+          title: "Rescisão Indireta",
+          description:
+            "Quando a empresa comete falta grave, o empregado pode pedir a rescisão e receber todas as verbas como se fosse demissão sem justa causa.",
+        },
+      ],
     },
     {
-      icon: "AlertTriangle",
-      title: "Demissão Injusta",
-      description:
-        "Análise da legalidade da demissão por justa causa e reversão quando houver irregularidade na conduta da empresa.",
-    },
-    {
-      icon: "Clock",
-      title: "Horas Extras e Adicionais",
-      description:
-        "Cobrança de horas extras, adicional noturno, periculosidade, insalubridade e intervalos intra/interjornada não respeitados.",
-    },
-    {
-      icon: "ShieldAlert",
-      title: "Assédio Moral",
-      description:
-        "Indenização por danos morais em casos de humilhação, perseguição, sobrecarga abusiva e situações degradantes no trabalho.",
-    },
-    {
-      icon: "FileX",
-      title: "Trabalho Sem Registro",
-      description:
-        "Reconhecimento de vínculo empregatício e cobrança retroativa de todas as verbas devidas pelo período trabalhado.",
-    },
-    {
-      icon: "Heart",
-      title: "Direito de Família",
-      description:
-        "Atuação complementar em guarda, pensão alimentícia, divórcio e planejamento familiar.",
+      id: "familia",
+      label: "Família",
+      areas: [
+        {
+          icon: "Baby",
+          title: "Guarda de Filhos",
+          description:
+            "Definição de guarda compartilhada ou unilateral, regulamentação de visitas e proteção do melhor interesse da criança.",
+        },
+        {
+          icon: "Coins",
+          title: "Pensão Alimentícia",
+          description:
+            "Fixação, revisão ou execução de pensão — para filhos, ex-cônjuge ou ascendentes, com cálculos justos e atualizados.",
+        },
+        {
+          icon: "HeartCrack",
+          title: "Divórcio",
+          description:
+            "Divórcio consensual ou litigioso, com partilha de bens equilibrada e foco em preservar o emocional de todos os envolvidos.",
+        },
+        {
+          icon: "Home",
+          title: "Planejamento Familiar",
+          description:
+            "Orientação jurídica preventiva para proteger sua família: união estável, pacto antenupcial, testamento e doação em vida.",
+        },
+      ],
     },
   ],
 
