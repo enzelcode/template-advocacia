@@ -167,7 +167,7 @@ export const siteConfig: SiteConfig = {
     title: "Defesa técnica de quem trabalha — com presença e estratégia.",
     name: "Dr. Jonathan Lopes",
     role: "Advogado — OAB/DF 00.000",
-    // photo: "/sobre.png", // adicionar foto quando disponível
+    photo: "/j.png",
     bio: [
       "Jonathan Lopes Advocacia atua exclusivamente em Direito do Trabalho, com foco na defesa de empregados que tiveram seus direitos violados — seja por verbas não pagas, demissão indevida, assédio moral ou trabalho sem registro.",
       "Cada caso é conduzido com análise técnica rigorosa, transparência sobre prazos e probabilidades reais. Você sabe o que esperar em cada etapa, sem juridiquês.",
