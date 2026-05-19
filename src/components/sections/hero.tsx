@@ -14,31 +14,24 @@ export function Hero() {
     <section
       ref={ref}
       id="top"
-      className="relative isolate overflow-hidden bg-background pt-36 pb-28 sm:pt-44 sm:pb-36"
+      className="relative isolate overflow-hidden bg-[color:var(--brand-navy)] pt-36 pb-24 text-[color:var(--primary-foreground)] sm:pt-44 sm:pb-32"
     >
-      {/* Camadas de fundo: gradiente + grid sutil + glow */}
+      {/* Pano de fundo: verde escuro com pillars + glow dourado */}
+      <div aria-hidden className="bg-pillars absolute inset-0 opacity-25" />
       <div
         aria-hidden
-        className="absolute inset-0 -z-20 bg-gradient-to-b from-[color:var(--background)] via-[color:var(--secondary)] to-background"
+        className="pointer-events-none absolute -top-40 right-[-20%] -z-10 size-[55rem] rounded-full bg-[color:var(--brand-gold)]/20 blur-[140px]"
       />
       <div
         aria-hidden
-        className="bg-grid mask-radial-fade absolute inset-0 -z-10 opacity-70"
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -top-40 right-[-15%] -z-10 size-[55rem] rounded-full bg-[color:var(--brand-gold)]/12 blur-[120px]"
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -bottom-32 -left-32 -z-10 size-[40rem] rounded-full bg-[color:var(--brand-navy)]/8 blur-[100px]"
+        className="pointer-events-none absolute -bottom-32 -left-32 -z-10 size-[40rem] rounded-full bg-black/40 blur-[120px]"
       />
 
-      {/* Decoração: escala da justiça em SVG, watermark sutil */}
+      {/* Balança da justiça: só em telas grandes (lg+) */}
       <svg
         aria-hidden
         viewBox="0 0 200 200"
-        className="pointer-events-none absolute -right-10 top-1/2 -z-10 w-[28rem] -translate-y-1/2 text-[color:var(--brand-navy)]/[0.035] sm:w-[36rem]"
+        className="pointer-events-none absolute right-[-4%] top-1/2 hidden w-[34rem] -translate-y-1/2 text-[color:var(--brand-gold)]/15 lg:block xl:w-[40rem]"
       >
         <g fill="none" stroke="currentColor" strokeWidth="0.8">
           <line x1="100" y1="20" x2="100" y2="180" />
@@ -49,37 +42,36 @@ export function Hero() {
         </g>
       </svg>
 
-      <Container className="relative grid gap-16 lg:grid-cols-[1.4fr_1fr] lg:items-end">
+      <Container className="relative grid gap-14 lg:grid-cols-[1.5fr_1fr] lg:items-end">
         <div>
-          {/* Eyebrow com hairline */}
           <div className="reveal flex items-center gap-4">
             <span className="h-px w-12 bg-[color:var(--brand-gold)]" />
-            <p className="text-[11px] font-medium uppercase tracking-[0.32em] text-[color:var(--brand-gold)]">
+            <p className="text-[10px] font-medium uppercase tracking-[0.32em] text-[color:var(--brand-gold)] sm:text-[11px]">
               {hero.eyebrow}
             </p>
           </div>
 
-          <h1 className="reveal mt-8 font-heading text-[2.6rem] font-normal leading-[1.02] text-[color:var(--brand-navy)] sm:text-6xl lg:text-[5.2rem] text-balance">
+          <h1 className="reveal mt-8 font-heading text-[2.8rem] font-normal leading-[1.05] text-white sm:text-6xl lg:text-[5.4rem] text-balance">
             {hero.headline}{" "}
-            <span className="italic font-light text-[color:var(--brand-navy)]/85">
+            <span className="italic font-light text-[color:var(--brand-gold)]">
               {hero.headlineEmphasis}
             </span>
           </h1>
 
-          <p className="reveal mt-8 max-w-xl text-base sm:text-lg leading-relaxed text-muted-foreground text-pretty">
+          <p className="reveal mt-8 max-w-xl text-base leading-relaxed text-white/75 sm:text-lg text-pretty">
             {hero.subheadline}
           </p>
 
-          <div className="reveal mt-12 flex flex-wrap items-center gap-x-8 gap-y-4">
-            <WhatsappButton label={hero.ctaPrimary} />
+          <div className="reveal mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
+            <WhatsappButton label={hero.ctaPrimary} tone="gold" />
             {hero.ctaSecondary ? (
               <Link
                 href="#areas"
-                className="group inline-flex items-center gap-3 text-sm font-medium text-foreground"
+                className="group inline-flex items-center gap-3 text-sm font-medium text-white"
               >
                 <span className="relative">
                   {hero.ctaSecondary}
-                  <span className="absolute -bottom-0.5 left-0 h-px w-full origin-left scale-x-30 bg-[color:var(--brand-navy)] transition-transform duration-300 group-hover:scale-x-100" />
+                  <span className="absolute -bottom-0.5 left-0 h-px w-full origin-left scale-x-30 bg-[color:var(--brand-gold)] transition-transform duration-300 group-hover:scale-x-100" />
                 </span>
                 <span aria-hidden className="transition-transform duration-300 group-hover:translate-x-1">→</span>
               </Link>
@@ -87,22 +79,22 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Coluna direita: stats verticais com tratamento serifa */}
-        <div className="reveal lg:pb-4">
-          <dl className="grid grid-cols-3 gap-6 border-y border-border/70 py-8 lg:grid-cols-1 lg:gap-0 lg:divide-y lg:divide-border/70 lg:border-x-0 lg:border-y-0 lg:py-0">
+        {/* Coluna direita: stats (sem balança no mobile) */}
+        <div className="lg:pb-4">
+          <dl className="reveal grid grid-cols-3 gap-6 border-y border-white/15 py-6 lg:grid-cols-1 lg:gap-0 lg:divide-y lg:divide-white/15 lg:border-x-0 lg:border-y-0 lg:py-0">
             {hero.stats.map((s) => (
               <div key={s.label} className="text-left lg:py-6">
-                <dt className="font-heading text-4xl font-normal text-[color:var(--brand-navy)] sm:text-5xl">
+                <dt className="font-heading text-3xl font-normal text-white sm:text-4xl lg:text-5xl">
                   {s.value}
                 </dt>
-                <dd className="mt-2 text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
+                <dd className="mt-1.5 text-[10px] uppercase tracking-[0.2em] text-white/55 sm:text-[11px]">
                   {s.label}
                 </dd>
               </div>
             ))}
           </dl>
 
-          <p className="reveal mt-8 flex items-center gap-3 text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
+          <p className="reveal mt-8 flex items-center gap-3 text-[10px] uppercase tracking-[0.3em] text-white/55">
             <span className="h-px w-8 bg-[color:var(--brand-gold)]" />
             {oab}
           </p>

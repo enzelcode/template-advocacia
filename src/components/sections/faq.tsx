@@ -30,7 +30,7 @@ export function Faq() {
               <span className="italic font-light">comuns</span>, respostas diretas.
             </h2>
             <p className="reveal mt-6 text-base text-muted-foreground text-pretty">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod.
+              Se sua dúvida não estiver aqui, é só chamar no WhatsApp.
             </p>
           </div>
 

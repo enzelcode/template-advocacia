@@ -49,28 +49,28 @@
 }
 
 :root {
-  /* Paleta template: navy escuro + creme + dourado discreto.
-     Cada branch de cliente pode sobrescrever esses tokens. */
-  --background: oklch(0.985 0.005 85);
-  --foreground: oklch(0.18 0.02 250);
+  /* Paleta Vila Nova: verde escuro + creme + dourado champagne.
+     (Era navy no template — branch vila-nova sobrescreve com o verde da marca.) */
+  --background: oklch(0.98 0.008 85);
+  --foreground: #1a3429;
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.18 0.02 250);
+  --card-foreground: #1a3429;
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.18 0.02 250);
-  --primary: oklch(0.22 0.04 255);
-  --primary-foreground: oklch(0.985 0.005 85);
-  --secondary: oklch(0.95 0.01 85);
-  --secondary-foreground: oklch(0.22 0.04 255);
-  --muted: oklch(0.95 0.01 85);
-  --muted-foreground: oklch(0.5 0.02 250);
-  --accent: oklch(0.72 0.12 75);
-  --accent-foreground: oklch(0.18 0.02 250);
+  --popover-foreground: #1a3429;
+  --primary: #234a3c;
+  --primary-foreground: oklch(0.98 0.008 85);
+  --secondary: oklch(0.95 0.012 85);
+  --secondary-foreground: #234a3c;
+  --muted: oklch(0.95 0.012 85);
+  --muted-foreground: oklch(0.48 0.018 150);
+  --accent: #c4a76e;
+  --accent-foreground: #234a3c;
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.9 0.01 85);
-  --input: oklch(0.9 0.01 85);
-  --ring: oklch(0.72 0.12 75);
-  --brand-gold: oklch(0.72 0.12 75);
-  --brand-navy: oklch(0.22 0.04 255);
+  --border: oklch(0.9 0.014 85);
+  --input: oklch(0.9 0.014 85);
+  --ring: #c4a76e;
+  --brand-gold: #c4a76e;
+  --brand-navy: #234a3c;
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
   --chart-3: oklch(0.439 0 0);

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { siteConfig } from "@/config/site";
 import { WhatsappButton } from "@/components/shared/whatsapp-button";
 import { Container } from "@/components/shared/container";
@@ -15,51 +16,48 @@ export function About() {
 
       <Container className="relative">
         <div className="grid gap-16 lg:grid-cols-[0.95fr_1.15fr] lg:gap-24 lg:items-center">
-          {/* Coluna imagem: placeholder sofisticado com pattern */}
+          {/* Coluna imagem */}
           <div className="reveal relative">
-            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-md bg-[color:var(--brand-navy)] noise">
-              {/* Pattern interno */}
+            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-md bg-[color:var(--brand-navy)]">
+              <Image
+                src="/sobre.png"
+                alt={about.name}
+                fill
+                sizes="(min-width: 1024px) 40vw, 100vw"
+                priority
+                className="object-cover object-center"
+              />
+              {/* Gradiente sutil só no rodapé pra legibilidade do nome */}
               <div
                 aria-hidden
-                className="absolute inset-0 opacity-60"
-                style={{
-                  backgroundImage:
-                    "repeating-linear-gradient(45deg, rgba(255,255,255,0.05) 0 1px, transparent 1px 14px)",
-                }}
+                className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/55 to-transparent"
               />
-              <div
-                aria-hidden
-                className="absolute inset-0 bg-gradient-to-tr from-[color:var(--brand-navy)] via-transparent to-[color:var(--brand-gold)]/30"
-              />
-
-              {/* Watermark serifa */}
-              <span className="absolute -bottom-6 -right-2 font-heading text-[14rem] font-normal leading-none text-white/[0.08] select-none">
-                {about.name.charAt(0)}
-              </span>
-
-              {/* Plate inferior */}
-              <div className="absolute inset-x-6 bottom-6 rounded-sm border border-white/10 bg-white/[0.04] px-5 py-4 backdrop-blur">
-                <p className="font-heading text-xl font-normal text-white">{about.name}</p>
-                <p className="text-[11px] uppercase tracking-[0.22em] text-white/60 mt-1">
+              {/* Plate com nome */}
+              <div className="absolute inset-x-6 bottom-6">
+                <p className="font-heading text-xl font-normal text-white drop-shadow-md">
+                  {about.name}
+                </p>
+                <p className="text-[10px] uppercase tracking-[0.22em] text-white/75 mt-1">
                   {about.role}
                 </p>
               </div>
             </div>
 
-            {/* Bloco estatística flutuante */}
+            {/* Hairline gold accent vertical */}
+            <span aria-hidden className="absolute -top-6 -left-6 hidden h-24 w-px bg-[color:var(--brand-gold)] sm:block" />
+
+            {/* Estatística abaixo da foto */}
             {about.stat ? (
-              <div className="absolute -bottom-8 -left-6 hidden rounded-md border border-border/70 bg-card px-6 py-5 shadow-xl shadow-[color:var(--brand-navy)]/10 sm:block">
+              <div className="mt-6 flex items-center gap-5 rounded-md border border-border/70 bg-card px-6 py-5 shadow-sm">
                 <p className="font-heading text-4xl font-normal text-[color:var(--brand-navy)]">
                   {about.stat.value}
                 </p>
-                <p className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground mt-1">
+                <span className="h-10 w-px bg-border" />
+                <p className="text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
                   {about.stat.label}
                 </p>
               </div>
             ) : null}
-
-            {/* Hairline gold accent vertical */}
-            <span aria-hidden className="absolute -top-6 -right-6 hidden h-24 w-px bg-[color:var(--brand-gold)] sm:block" />
           </div>
 
           <div>
@@ -85,7 +83,6 @@ export function About() {
               ))}
             </div>
 
-            {/* Credenciais com hairline e marcadores discretos */}
             <ul className="reveal mt-10 grid gap-x-8 gap-y-3 sm:grid-cols-2">
               {about.credentials.map((c) => (
                 <li

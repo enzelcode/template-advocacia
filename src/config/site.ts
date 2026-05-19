@@ -1,10 +1,8 @@
 /**
  * Configuração do site — TUDO que muda por cliente fica aqui.
  *
- * Ao criar uma branch nova pra um cliente (ex: `vila-nova`), edite somente
- * este arquivo (e as imagens em /public). Os componentes leem tudo daqui.
- *
- * O conteúdo abaixo é placeholder (lorem ipsum) — substituir na branch do cliente.
+ * Branch: vila-nova
+ * Cliente: Vila Nova | Advocacia e Assessoria Jurídica
  */
 
 export type PracticeArea = {
@@ -43,9 +41,10 @@ export type SiteConfig = {
   tagline: string;
   description: string;
   url: string;
+  logo?: { src: string; width: number; height: number; alt: string };
 
   contact: {
-    phone: string;
+    phone?: string;
     whatsapp: string;
     whatsappMessage: string;
     email: string;
@@ -95,197 +94,205 @@ export type SiteConfig = {
 };
 
 export const siteConfig: SiteConfig = {
-  name: "Lorem Ipsum Advocacia",
-  shortName: "Lorem Ipsum",
-  oab: "OAB/SP 000.000",
-  tagline: "Lorem ipsum dolor sit amet, consectetur",
+  name: "Vila Nova | Advocacia e Assessoria Jurídica",
+  shortName: "Vila Nova",
+  oab: "OAB/PB 00.000", // ← preencher com o número real
+  tagline: "Advocacia e Assessoria Jurídica",
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  url: "https://template-advocacia.vercel.app",
+    "Atendimento jurídico especializado em Direito Civil, Trabalhista e Previdenciário. Consultas mediante agendamento.",
+  url: "https://template-advocacia-git-vila-nova.vercel.app",
+
+  logo: {
+    src: "/vn.webp",
+    width: 700,
+    height: 200,
+    alt: "Vila Nova — Advocacia e Assessoria Jurídica",
+  },
 
   contact: {
-    phone: "(00) 00000-0000",
-    whatsapp: "5500000000000",
-    whatsappMessage: "Lorem ipsum dolor sit amet.",
-    email: "contato@loremipsum.adv.br",
-    address: "Lorem Ipsum, 1000 — Cidade/UF",
+    phone: "(32) 9985-8984",
+    whatsapp:
+      "https://api.whatsapp.com/message/WRDW2BB5KJ7OP1?autoload=1&app_absent=0&utm_source=ig",
+    whatsappMessage:
+      "Olá, vim pelo site da Vila Nova Advocacia e gostaria de tirar uma dúvida.",
+    email: "contato@vilanovadvocacia.adv.br",
+    address: "Barbacena · MG",
   },
 
   social: {
-    instagram: "https://instagram.com/loremipsum",
-    linkedin: "https://linkedin.com/in/loremipsum",
+    instagram: "https://www.instagram.com/leandrovilanova.adv/",
   },
 
   hero: {
-    eyebrow: "Lorem ipsum · dolor sit",
-    headline: "Lorem ipsum dolor sit amet,",
-    headlineEmphasis: "consectetur adipiscing.",
+    eyebrow: "Vila Nova · Advocacia e Assessoria Jurídica",
+    headline: "Direito que",
+    headlineEmphasis: "defende você.",
     subheadline:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    ctaPrimary: "Lorem ipsum dolor",
-    ctaSecondary: "Sit amet consectetur",
+      "Atuação em Direito Civil, Trabalhista e Previdenciário — com escuta atenta, técnica apurada e estratégia clara.",
+    ctaPrimary: "Agendar consulta",
+    ctaSecondary: "Áreas de atuação",
     stats: [
-      { value: "20+", label: "Anos de atuação" },
-      { value: "850", label: "Casos conduzidos" },
-      { value: "98%", label: "Satisfação" },
+      { value: "100%", label: "Atendimento personalizado" },
+      { value: "5+", label: "Áreas de atuação" },
+      { value: "24h", label: "Resposta no WhatsApp" },
     ],
   },
 
   highlights: [
     {
-      icon: "MonitorSmartphone",
-      title: "Lorem ipsum dolor",
+      icon: "ShieldCheck",
+      title: "Análise jurídica criteriosa",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.",
+        "Cada caso é estudado a fundo antes de qualquer estratégia — sem promessas, com clareza sobre prazos e probabilidades reais.",
     },
     {
-      icon: "ShieldCheck",
-      title: "Consectetur elit",
+      icon: "Handshake",
+      title: "Atendimento próximo",
       description:
-        "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.",
+        "Consultas mediante agendamento, com escuta atenta e linguagem acessível. Você fala direto com o advogado responsável.",
     },
     {
       icon: "Lock",
-      title: "Sit amet adipiscing",
+      title: "Sigilo e ética profissional",
       description:
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.",
+        "Atuação pautada pelo Código de Ética da OAB, com sigilo absoluto sobre todas as informações compartilhadas.",
     },
   ],
 
   about: {
-    eyebrow: "Quem nós somos",
-    title: "Lorem ipsum dolor sit amet, consectetur.",
-    name: "Lorem Ipsum",
-    role: "Advogado(a) — OAB/SP 000.000",
-    photo: "/about-photo.jpg",
+    eyebrow: "Sobre o escritório",
+    title:
+      "Um escritório que une técnica jurídica e atendimento humanizado.",
+    name: "Dr. Leandro Vila Nova",
+    role: "Advogado — Vila Nova Advocacia",
     bio: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
-      "Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "Vila Nova Advocacia e Assessoria Jurídica é um escritório especializado em Direito Civil, Trabalhista e Previdenciário, com atuação focada na defesa dos direitos do cliente e na construção de soluções jurídicas sólidas e eficazes.",
+      "Cada caso é conduzido com escuta atenta, análise técnica rigorosa e total transparência sobre prazos, riscos e custos. Acreditamos que o direito se faz com presença, ética e estratégia — não com promessas.",
     ],
     credentials: [
-      "Lorem ipsum dolor sit — Universidade Ipsum",
-      "Pós-graduação em Lorem Ipsum",
-      "Membro da Comissão Lorem Ipsum da OAB",
-      "Autor de publicações em Lorem Ipsum",
+      "Especialização em Direito Civil e Trabalhista",
+      "Atuação em ações previdenciárias e revisionais",
+      "Elaboração e revisão de contratos empresariais e particulares",
+      "Adequação à LGPD para empresas e profissionais",
     ],
-    stat: { value: "20+", label: "Anos no contencioso" },
+    stat: { value: "100%", label: "Casos com acompanhamento direto" },
   },
 
   practiceAreas: [
     {
-      icon: "Briefcase",
-      title: "Lorem Trabalhista",
+      icon: "Scale",
+      title: "Direito Civil",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.",
-    },
-    {
-      icon: "Heart",
-      title: "Ipsum de Família",
-      description:
-        "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.",
+        "Indenizações por danos morais e materiais, responsabilidade civil, questões contratuais e ações cíveis em geral.",
     },
     {
       icon: "ShoppingBag",
-      title: "Dolor do Consumidor",
+      title: "Direito do Consumidor",
       description:
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.",
+        "Cobranças indevidas, negativações injustas, problemas com bancos, planos de saúde, comércio eletrônico e prestadores de serviço.",
     },
     {
-      icon: "Scale",
-      title: "Sit amet Civil",
+      icon: "Briefcase",
+      title: "Direito do Trabalho",
       description:
-        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.",
+        "Verbas rescisórias, rescisão indireta, assédio moral, horas extras, estabilidade da gestante e reconhecimento de vínculo.",
     },
     {
-      icon: "Home",
-      title: "Consectetur Imobiliário",
+      icon: "HeartHandshake",
+      title: "Direito Previdenciário",
       description:
-        "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.",
+        "Aposentadorias, auxílios, BPC/LOAS, revisões e acréscimo de 25% para aposentados por invalidez junto ao INSS.",
     },
     {
       icon: "FileText",
-      title: "Adipiscing Preventiva",
+      title: "Elaboração de Contratos",
       description:
-        "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur.",
+        "Análise, revisão e elaboração de contratos civis e empresariais, com cláusulas claras e proteção jurídica adequada.",
+    },
+    {
+      icon: "ShieldCheck",
+      title: "Adequação à LGPD",
+      description:
+        "Consultoria preventiva para adequação de empresas e profissionais à Lei Geral de Proteção de Dados.",
     },
   ],
 
   process: [
     {
       step: "01",
-      title: "Lorem ipsum",
+      title: "Primeiro contato",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.",
+        "Você nos chama pelo WhatsApp ou e-mail e descreve resumidamente sua demanda. Confirmamos disponibilidade.",
     },
     {
       step: "02",
-      title: "Dolor sit amet",
+      title: "Agendamento",
       description:
-        "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+        "Marcamos a consulta no melhor horário pra você — presencial ou online. Pedimos os documentos relevantes com antecedência.",
     },
     {
       step: "03",
-      title: "Consectetur elit",
+      title: "Análise e proposta",
       description:
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+        "Avaliamos o caso, explicamos cenários possíveis e apresentamos honorários por escrito antes de qualquer compromisso.",
     },
     {
       step: "04",
-      title: "Adipiscing veniam",
+      title: "Acompanhamento",
       description:
-        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.",
+        "Conduzimos o caso com atualizações periódicas e canal direto pra dúvidas — sem você ficar correndo atrás de informação.",
     },
   ],
 
   testimonials: [
     {
-      name: "Lorem S.",
-      role: "Cliente — Trabalhista",
-      initials: "LS",
+      name: "Cliente",
+      role: "Direito do Trabalho",
+      initials: "CL",
       quote:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "Atendimento atencioso desde o primeiro contato. O Dr. Leandro explicou tudo com clareza e conduziu o processo com seriedade.",
     },
     {
-      name: "Ipsum P.",
-      role: "Cliente — Consumidor",
-      initials: "IP",
+      name: "Cliente",
+      role: "Direito Previdenciário",
+      initials: "CL",
       quote:
-        "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "Profissional sério e dedicado. Conseguiu o acréscimo de 25% na minha aposentadoria após meses tentando sozinho.",
     },
     {
-      name: "Dolor L.",
-      role: "Cliente — Família",
-      initials: "DL",
+      name: "Cliente",
+      role: "Direito do Consumidor",
+      initials: "CL",
       quote:
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "Resolveu em poucas semanas uma cobrança indevida que eu vinha arrastando há mais de um ano. Recomendo demais.",
     },
   ],
 
   faq: [
     {
-      question: "Lorem ipsum dolor sit amet?",
+      question: "Como funcionam as consultas?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "As consultas são mediante agendamento, podendo ser presenciais ou online por videochamada. Após o primeiro contato pelo WhatsApp, confirmamos um horário e enviamos as orientações sobre documentos necessários.",
     },
     {
-      question: "Consectetur adipiscing elit, sed do eiusmod?",
+      question: "Vocês atendem em todo o Brasil?",
       answer:
-        "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "Sim. Atuamos com atendimento online em todo o território nacional para ações cíveis, trabalhistas, previdenciárias e elaboração de contratos.",
     },
     {
-      question: "Duis aute irure dolor in reprehenderit?",
+      question: "Quanto custa contratar o escritório?",
       answer:
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "Os honorários variam conforme a complexidade e o tipo de causa. Em ações trabalhistas e previdenciárias, geralmente trabalhamos com honorários ad exitum (percentual sobre o êxito). Tudo é apresentado por escrito e combinado em contrato antes do início.",
     },
     {
-      question: "Excepteur sint occaecat cupidatat non proident?",
+      question: "Quanto tempo demora um processo?",
       answer:
-        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "Depende da Vara e da complexidade. Processos trabalhistas levam em média de 8 a 18 meses; previdenciários, de 12 a 24 meses. Apresentamos uma estimativa realista logo na análise inicial do caso.",
     },
     {
-      question: "Nemo enim ipsam voluptatem quia voluptas?",
+      question: "Vocês fazem orçamentos por DM no Instagram?",
       answer:
-        "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores.",
+        "Não. Para garantir uma análise responsável e proteger seus dados, qualquer orientação jurídica é feita exclusivamente em consulta agendada. Pelo WhatsApp confirmamos disponibilidade e tiramos dúvidas sobre o agendamento.",
     },
   ],
 };

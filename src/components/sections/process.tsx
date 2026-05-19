@@ -20,11 +20,11 @@ export function Process() {
             <span className="h-px w-10 bg-[color:var(--brand-gold)]" />
           </div>
           <h2 className="reveal mt-6 font-heading text-3xl font-normal leading-tight text-[color:var(--brand-navy)] sm:text-5xl text-balance">
-            Lorem ipsum, dolor sit{" "}
-            <span className="italic font-light">amet</span>.
+            Do primeiro contato à{" "}
+            <span className="italic font-light">solução</span>.
           </h2>
           <p className="reveal mt-5 text-base text-muted-foreground text-pretty">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.
+            Cada etapa é explicada com clareza, sem juridiquês e sem surpresas.
           </p>
         </div>
 
