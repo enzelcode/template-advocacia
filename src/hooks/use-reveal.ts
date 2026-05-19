@@ -49,7 +49,6 @@ export function useReveal<T extends HTMLElement = HTMLElement>(deps: unknown[] =
     }
 
     // Senão, observa entrada via IntersectionObserver.
-    let tween: gsap.core.Tween | null = null;
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
@@ -63,10 +62,7 @@ export function useReveal<T extends HTMLElement = HTMLElement>(deps: unknown[] =
     );
     observer.observe(el);
 
-    return () => {
-      observer.disconnect();
-      tween?.kill();
-    };
+    return () => observer.disconnect();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, deps);
 
