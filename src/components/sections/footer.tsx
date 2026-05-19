@@ -35,7 +35,7 @@ export function Footer() {
                 alt={siteConfig.logo.alt}
                 width={siteConfig.logo.width}
                 height={siteConfig.logo.height}
-                className="h-12 w-auto"
+                className="h-20 w-auto"
               />
             ) : (
               <p className="font-heading text-2xl font-normal text-[color:var(--brand-navy)]">

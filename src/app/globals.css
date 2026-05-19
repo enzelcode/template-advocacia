@@ -49,28 +49,28 @@
 }
 
 :root {
-  /* Paleta André Barbosa: preto profundo + branco + laranja vibrante.
-     (--brand-navy aqui = preto; --brand-gold = laranja.) */
+  /* Paleta André Barbosa: preto + branco + dourado clássico + cinzas quentes.
+     (--brand-navy aqui = preto profundo; --brand-gold = dourado champagne.) */
   --background: #ffffff;
-  --foreground: #0f0f10;
+  --foreground: #15140f;
   --card: #ffffff;
-  --card-foreground: #0f0f10;
+  --card-foreground: #15140f;
   --popover: #ffffff;
-  --popover-foreground: #0f0f10;
-  --primary: #0f0f10;
+  --popover-foreground: #15140f;
+  --primary: #15140f;
   --primary-foreground: #ffffff;
-  --secondary: #f5f5f4;
-  --secondary-foreground: #0f0f10;
-  --muted: #f5f5f4;
-  --muted-foreground: #5a5a5c;
-  --accent: #ea580c;
-  --accent-foreground: #0f0f10;
+  --secondary: #f4f1ea;
+  --secondary-foreground: #15140f;
+  --muted: #f4f1ea;
+  --muted-foreground: #6b665b;
+  --accent: #c4a560;
+  --accent-foreground: #15140f;
   --destructive: oklch(0.577 0.245 27.325);
-  --border: #e5e5e4;
-  --input: #e5e5e4;
-  --ring: #ea580c;
-  --brand-gold: #ea580c;
-  --brand-navy: #0f0f10;
+  --border: #e7e2d6;
+  --input: #e7e2d6;
+  --ring: #c4a560;
+  --brand-gold: #c4a560;
+  --brand-navy: #15140f;
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
   --chart-3: oklch(0.439 0 0);

@@ -71,7 +71,7 @@ export function Header() {
                 width={siteConfig.logo.width}
                 height={siteConfig.logo.height}
                 priority
-                className="h-10 w-auto sm:h-11"
+                className="h-14 w-auto sm:h-16"
               />
             ) : (
               <span className="font-heading text-xl font-normal tracking-tight text-[color:var(--brand-navy)]">

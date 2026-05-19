@@ -108,6 +108,13 @@ export const siteConfig: SiteConfig = {
     "Advocacia trabalhista com atendimento humanizado e estratégia técnica. Defesa dos seus direitos diante de demissões injustas, verbas não pagas, assédio e mais.",
   url: "https://template-advocacia-git-andre-barbosa.vercel.app",
 
+  logo: {
+    src: "/ab.webp",
+    width: 760,
+    height: 600,
+    alt: "André Barbosa Advocacia",
+  },
+
   contact: {
     phone: "(11) 93472-2863",
     whatsapp: "5511934722863",
