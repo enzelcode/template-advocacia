@@ -1,16 +1,20 @@
 /**
  * Configuração do site — TUDO que muda por cliente fica aqui.
  *
- * Ao criar uma branch nova pra um cliente (ex: `vila-nova`), edite somente
- * este arquivo (e as imagens em /public). Os componentes leem tudo daqui.
- *
- * O conteúdo abaixo é placeholder (lorem ipsum) — substituir na branch do cliente.
+ * Branch: jonathan-lopes
+ * Cliente: Advogado Jonathan Lopes (Direito do Empregado)
  */
 
 export type PracticeArea = {
   title: string;
   description: string;
   icon: string;
+};
+
+export type PracticeAreaGroup = {
+  id: string;
+  label: string;
+  areas: PracticeArea[];
 };
 
 export type ProcessStep = {
@@ -43,9 +47,10 @@ export type SiteConfig = {
   tagline: string;
   description: string;
   url: string;
+  logo?: { src: string; width: number; height: number; alt: string };
 
   contact: {
-    phone: string;
+    phone?: string;
     whatsapp: string;
     whatsappMessage: string;
     email: string;
@@ -85,7 +90,7 @@ export type SiteConfig = {
     stat?: Stat;
   };
 
-  practiceAreas: PracticeArea[];
+  practiceAreas: PracticeAreaGroup[];
 
   process: ProcessStep[];
 
@@ -95,197 +100,238 @@ export type SiteConfig = {
 };
 
 export const siteConfig: SiteConfig = {
-  name: "Lorem Ipsum Advocacia",
-  shortName: "Lorem Ipsum",
-  oab: "OAB/SP 000.000",
-  tagline: "Lorem ipsum dolor sit amet, consectetur",
+  name: "Jonathan Lopes Advocacia",
+  shortName: "Jonathan Lopes",
+  oab: "OAB/DF 00.000", // ← preencher com OAB real
+  tagline: "Especialista em Direito do Empregado",
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  url: "https://template-advocacia.vercel.app",
+    "Advocacia trabalhista especializada em direito do empregado — verbas, horas extras, assédio e reconhecimento de vínculo. Análise técnica e atendimento humanizado.",
+  url: "https://template-advocacia-git-jonathan-lopes.vercel.app",
+
+  // Sem arquivo de logo — o header renderiza a marca inline (ícone de balança + serifa)
 
   contact: {
-    phone: "(00) 00000-0000",
-    whatsapp: "5500000000000",
-    whatsappMessage: "Lorem ipsum dolor sit amet.",
-    email: "contato@loremipsum.adv.br",
-    address: "Lorem Ipsum, 1000 — Cidade/UF",
+    phone: "(61) 8652-1233",
+    whatsapp:
+      "https://api.whatsapp.com/message/2GKIBEWLKGXEB1?autoload=1&app_absent=0",
+    whatsappMessage:
+      "Olá, Dr. Jonathan. Vim pelo site e gostaria de tirar uma dúvida trabalhista.",
+    email: "jonathan.rodrigo_df@hotmail.com",
+    address: "Brasília · DF",
   },
 
   social: {
-    instagram: "https://instagram.com/loremipsum",
-    linkedin: "https://linkedin.com/in/loremipsum",
+    instagram: "https://www.instagram.com/jonathanroodrigo/",
+    facebook: "https://www.facebook.com/adv.jonathanrodrigo",
+    linkedin: "https://www.linkedin.com/in/jonathan-lopes-799551236",
   },
 
   hero: {
-    eyebrow: "Lorem ipsum · dolor sit",
-    headline: "Lorem ipsum dolor sit amet,",
-    headlineEmphasis: "consectetur adipiscing.",
+    eyebrow: "Jonathan Lopes · Direito do Empregado",
+    headline: "Conhecer seus direitos",
+    headlineEmphasis: "faz toda a diferença.",
     subheadline:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    ctaPrimary: "Lorem ipsum dolor",
-    ctaSecondary: "Sit amet consectetur",
+      "Análise técnica de contratos e verbas trabalhistas, defesa do empregado e orientação jurídica segura — pra você receber o que é seu por direito.",
+    ctaPrimary: "Falar com o advogado",
+    ctaSecondary: "Áreas de atuação",
     stats: [
-      { value: "20+", label: "Anos de atuação" },
-      { value: "850", label: "Casos conduzidos" },
-      { value: "98%", label: "Satisfação" },
+      { value: "100%", label: "Foco em trabalhista" },
+      { value: "2 anos", label: "Prazo para ajuizar" },
+      { value: "24h", label: "Resposta no WhatsApp" },
     ],
   },
 
   highlights: [
     {
-      icon: "MonitorSmartphone",
-      title: "Lorem ipsum dolor",
+      icon: "Scale",
+      title: "Análise técnica segura",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.",
+        "Cada caso é estudado a fundo antes de qualquer estratégia. Você recebe um parecer claro sobre viabilidade e prazos.",
+    },
+    {
+      icon: "Handshake",
+      title: "Atendimento humanizado",
+      description:
+        "Linguagem acessível, escuta atenta e contato direto com o advogado. Sem juridiquês e sem promessas vazias.",
     },
     {
       icon: "ShieldCheck",
-      title: "Consectetur elit",
+      title: "Sigilo e ética",
       description:
-        "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.",
-    },
-    {
-      icon: "Lock",
-      title: "Sit amet adipiscing",
-      description:
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.",
+        "Atuação pautada pelo Código de Ética da OAB, com sigilo absoluto sobre todas as informações compartilhadas.",
     },
   ],
 
   about: {
-    eyebrow: "Quem nós somos",
-    title: "Lorem ipsum dolor sit amet, consectetur.",
-    name: "Lorem Ipsum",
-    role: "Advogado(a) — OAB/SP 000.000",
-    photo: "/about-photo.jpg",
+    eyebrow: "Sobre o escritório",
+    title: "Defesa técnica de quem trabalha — com presença e estratégia.",
+    name: "Dr. Jonathan Lopes",
+    role: "Advogado — OAB/DF 00.000",
+    // photo: "/sobre.png", // adicionar foto quando disponível
     bio: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
-      "Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "Jonathan Lopes Advocacia atua exclusivamente em Direito do Trabalho, com foco na defesa de empregados que tiveram seus direitos violados — seja por verbas não pagas, demissão indevida, assédio moral ou trabalho sem registro.",
+      "Cada caso é conduzido com análise técnica rigorosa, transparência sobre prazos e probabilidades reais. Você sabe o que esperar em cada etapa, sem juridiquês.",
     ],
     credentials: [
-      "Lorem ipsum dolor sit — Universidade Ipsum",
-      "Pós-graduação em Lorem Ipsum",
-      "Membro da Comissão Lorem Ipsum da OAB",
-      "Autor de publicações em Lorem Ipsum",
+      "Especialização em Direito do Trabalho",
+      "Atuação em rescisões indiretas e horas extras",
+      "Análise de contratos e verbas trabalhistas",
+      "Defesa em casos de assédio moral",
     ],
-    stat: { value: "20+", label: "Anos no contencioso" },
+    stat: { value: "100%", label: "Atuação trabalhista" },
   },
 
   practiceAreas: [
     {
-      icon: "Briefcase",
-      title: "Lorem Trabalhista",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.",
+      id: "empregado",
+      label: "Empregado",
+      areas: [
+        {
+          icon: "Briefcase",
+          title: "Verbas Rescisórias",
+          description:
+            "Cobrança de aviso prévio, férias, 13º, FGTS, multa e tudo o que é seu por direito após a demissão.",
+        },
+        {
+          icon: "Clock",
+          title: "Horas Extras",
+          description:
+            "Horas extras, adicional noturno, intervalos não respeitados e jornada excessiva — com cálculos detalhados.",
+        },
+        {
+          icon: "FileX",
+          title: "Trabalho Sem Registro",
+          description:
+            "Reconhecimento de vínculo empregatício e cobrança retroativa de todas as verbas devidas pelo período.",
+        },
+        {
+          icon: "ShieldAlert",
+          title: "Assédio Moral",
+          description:
+            "Indenização por danos morais em casos de humilhação, perseguição ou sobrecarga abusiva no trabalho.",
+        },
+        {
+          icon: "Gavel",
+          title: "Rescisão Indireta",
+          description:
+            "Quando a empresa comete falta grave, você pode pedir rescisão e receber todas as verbas como demissão sem justa causa.",
+        },
+        {
+          icon: "AlertTriangle",
+          title: "Adicionais e Periculosidade",
+          description:
+            "Insalubridade, periculosidade e demais adicionais não pagos durante o vínculo empregatício.",
+        },
+      ],
     },
     {
-      icon: "Heart",
-      title: "Ipsum de Família",
-      description:
-        "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.",
-    },
-    {
-      icon: "ShoppingBag",
-      title: "Dolor do Consumidor",
-      description:
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.",
-    },
-    {
-      icon: "Scale",
-      title: "Sit amet Civil",
-      description:
-        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.",
-    },
-    {
-      icon: "Home",
-      title: "Consectetur Imobiliário",
-      description:
-        "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.",
-    },
-    {
-      icon: "FileText",
-      title: "Adipiscing Preventiva",
-      description:
-        "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur.",
+      id: "empregador",
+      label: "Empregador",
+      areas: [
+        {
+          icon: "FileText",
+          title: "Análise de Contratos",
+          description:
+            "Revisão de contratos de trabalho e prestação de serviços com foco em prevenir passivo trabalhista.",
+        },
+        {
+          icon: "Scale",
+          title: "Defesa em Reclamações",
+          description:
+            "Representação técnica da empresa em ações trabalhistas, com estratégia processual definida caso a caso.",
+        },
+        {
+          icon: "ShieldCheck",
+          title: "Consultoria Preventiva",
+          description:
+            "Orientação contínua sobre rotinas trabalhistas, demissões, jornada e gestão de pessoas.",
+        },
+        {
+          icon: "Handshake",
+          title: "Acordos e Mediação",
+          description:
+            "Negociação extrajudicial e acordos para resolver conflitos com menos custo e exposição.",
+        },
+      ],
     },
   ],
 
   process: [
     {
       step: "01",
-      title: "Lorem ipsum",
+      title: "Primeiro contato",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.",
+        "Você nos chama pelo WhatsApp e descreve resumidamente sua situação. Confirmamos disponibilidade.",
     },
     {
       step: "02",
-      title: "Dolor sit amet",
+      title: "Análise inicial",
       description:
-        "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+        "Avaliamos documentos, prazos e a viabilidade jurídica do caso — com clareza sobre cenários reais.",
     },
     {
       step: "03",
-      title: "Consectetur elit",
+      title: "Estratégia e proposta",
       description:
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+        "Apresentamos a estratégia, prazos estimados e honorários por escrito antes de qualquer compromisso.",
     },
     {
       step: "04",
-      title: "Adipiscing veniam",
+      title: "Ação e acompanhamento",
       description:
-        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.",
+        "Conduzimos o processo com atualizações periódicas e canal direto pra dúvidas — sem você correr atrás.",
     },
   ],
 
   testimonials: [
     {
-      name: "Lorem S.",
-      role: "Cliente — Trabalhista",
-      initials: "LS",
+      name: "Cliente",
+      role: "Verbas rescisórias",
+      initials: "CL",
       quote:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "Atendimento atencioso desde o primeiro contato. Recebi todas as verbas que a empresa não tinha pago e o Dr. Jonathan explicou tudo com clareza.",
     },
     {
-      name: "Ipsum P.",
-      role: "Cliente — Consumidor",
-      initials: "IP",
+      name: "Cliente",
+      role: "Reconhecimento de vínculo",
+      initials: "CL",
       quote:
-        "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "Trabalhei como autônomo por anos, mas era empregado de verdade. O escritório conseguiu o reconhecimento do vínculo e todas as verbas retroativas.",
     },
     {
-      name: "Dolor L.",
-      role: "Cliente — Família",
-      initials: "DL",
+      name: "Cliente",
+      role: "Assédio moral",
+      initials: "CL",
       quote:
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "Profissional sério, ético e que escuta de verdade. Me senti respeitada durante todo o processo.",
     },
   ],
 
   faq: [
     {
-      question: "Lorem ipsum dolor sit amet?",
+      question: "Qual o prazo para entrar com uma ação trabalhista?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "O prazo é de até 2 anos após o término do contrato de trabalho. Dentro desse período, é possível cobrar valores referentes aos últimos 5 anos. Por isso, agir rápido faz diferença.",
     },
     {
-      question: "Consectetur adipiscing elit, sed do eiusmod?",
+      question: "A primeira consulta é gratuita?",
       answer:
-        "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "Sim. A análise inicial do seu caso é gratuita e sem compromisso. Você apresenta a situação, avaliamos a viabilidade e só seguimos se fizer sentido.",
     },
     {
-      question: "Duis aute irure dolor in reprehenderit?",
+      question: "Quanto custa contratar o escritório?",
       answer:
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "Em ações trabalhistas geralmente trabalhamos com honorários ad exitum — você só paga se ganhar a causa, com um percentual combinado por escrito antes de iniciar.",
     },
     {
-      question: "Excepteur sint occaecat cupidatat non proident?",
+      question: "Quanto tempo demora um processo trabalhista?",
       answer:
-        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "Depende da complexidade e da Vara, mas processos trabalhistas levam em média de 8 a 18 meses. Apresentamos uma estimativa realista na análise inicial.",
     },
     {
-      question: "Nemo enim ipsam voluptatem quia voluptas?",
+      question: "Atende presencial ou só online?",
       answer:
-        "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores.",
+        "Atendo das duas formas. Consultas podem ser totalmente online por videochamada e WhatsApp, ou presenciais em Brasília quando preferir.",
     },
   ],
 };

@@ -1,11 +1,15 @@
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig } from "@/config/site";
 import {
   InstagramIcon,
   LinkedInIcon,
   FacebookIcon,
+  WhatsappIcon,
 } from "@/components/shared/brand-icons";
+import { BrandMark } from "@/components/shared/brand-mark";
 import { Container } from "@/components/shared/container";
+import { whatsappLink } from "@/lib/whatsapp";
 
 const navLinks = [
   { href: "#sobre", label: "Sobre" },
@@ -26,10 +30,18 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
           {/* Brand */}
           <div>
-            <p className="font-heading text-2xl font-normal text-[color:var(--brand-navy)]">
-              {siteConfig.name}
-            </p>
-            <p className="mt-2 text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
+            {siteConfig.logo ? (
+              <Image
+                src={siteConfig.logo.src}
+                alt={siteConfig.logo.alt}
+                width={siteConfig.logo.width}
+                height={siteConfig.logo.height}
+                className="h-28 w-auto"
+              />
+            ) : (
+              <BrandMark size="lg" />
+            )}
+            <p className="mt-3 text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
               {siteConfig.oab}
             </p>
             <p className="mt-6 max-w-sm text-sm leading-relaxed text-muted-foreground text-pretty">
@@ -37,6 +49,15 @@ export function Footer() {
             </p>
 
             <div className="mt-8 flex items-center gap-3">
+              <Link
+                href={whatsappLink()}
+                aria-label="WhatsApp"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="grid size-10 place-items-center rounded-full border border-border/70 text-muted-foreground transition-all hover:border-[color:var(--brand-gold)] hover:text-[color:var(--brand-gold)]"
+              >
+                <WhatsappIcon className="size-4" />
+              </Link>
               {social.instagram ? (
                 <Link
                   href={social.instagram}
@@ -98,7 +119,7 @@ export function Footer() {
               Contato
             </p>
             <ul className="mt-5 space-y-3 text-sm text-foreground/80">
-              <li>{contact.phone}</li>
+              {contact.phone ? <li>{contact.phone}</li> : null}
               <li>
                 <a
                   href={`mailto:${contact.email}`}

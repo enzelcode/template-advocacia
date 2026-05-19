@@ -44,9 +44,9 @@ export function Testimonials() {
         <div className="mt-20 grid gap-6 md:grid-cols-3 md:gap-8">
           {siteConfig.testimonials.map((t, i) => (
             <figure
-              key={t.name}
+              key={`${t.name}-${i}`}
               className={`reveal group relative flex flex-col gap-6 rounded-sm border border-white/10 bg-white/[0.025] p-8 backdrop-blur transition-all duration-500 hover:border-[color:var(--brand-gold)]/40 hover:bg-white/[0.05] ${
-                i === 1 ? "md:-translate-y-6" : ""
+                i === 1 ? "md:-mt-6 md:mb-6" : ""
               }`}
             >
               <QuoteMark className="size-7 text-[color:var(--brand-gold)]" />
