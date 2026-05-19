@@ -1,10 +1,8 @@
 /**
  * Configuração do site — TUDO que muda por cliente fica aqui.
  *
- * Ao criar uma branch nova pra um cliente (ex: `vila-nova`), edite somente
- * este arquivo (e as imagens em /public). Os componentes leem tudo daqui.
- *
- * O conteúdo abaixo é placeholder (lorem ipsum) — substituir na branch do cliente.
+ * Branch: andre-barbosa
+ * Cliente: André Barbosa Advocacia (foco em Direito Trabalhista)
  */
 
 export type PracticeArea = {
@@ -43,9 +41,10 @@ export type SiteConfig = {
   tagline: string;
   description: string;
   url: string;
+  logo?: { src: string; width: number; height: number; alt: string };
 
   contact: {
-    phone: string;
+    phone?: string;
     whatsapp: string;
     whatsappMessage: string;
     email: string;
@@ -95,197 +94,197 @@ export type SiteConfig = {
 };
 
 export const siteConfig: SiteConfig = {
-  name: "Lorem Ipsum Advocacia",
-  shortName: "Lorem Ipsum",
-  oab: "OAB/SP 000.000",
-  tagline: "Lorem ipsum dolor sit amet, consectetur",
+  name: "André Barbosa Advocacia",
+  shortName: "André Barbosa",
+  oab: "OAB/SP 00.000", // ← preencher com OAB real
+  tagline: "Advocacia Trabalhista",
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  url: "https://template-advocacia.vercel.app",
+    "Advocacia trabalhista com atendimento humanizado e estratégia técnica. Defesa dos seus direitos diante de demissões injustas, verbas não pagas, assédio e mais.",
+  url: "https://template-advocacia-git-andre-barbosa.vercel.app",
 
   contact: {
-    phone: "(00) 00000-0000",
-    whatsapp: "5500000000000",
-    whatsappMessage: "Lorem ipsum dolor sit amet.",
-    email: "contato@loremipsum.adv.br",
-    address: "Lorem Ipsum, 1000 — Cidade/UF",
+    phone: "(11) 93472-2863",
+    whatsapp: "5511934722863",
+    whatsappMessage:
+      "Olá, Dr. André. Vim pelo site e gostaria de tirar uma dúvida trabalhista.",
+    email: "contato@andrebarbosaadv.com.br",
   },
 
   social: {
-    instagram: "https://instagram.com/loremipsum",
-    linkedin: "https://linkedin.com/in/loremipsum",
+    instagram: "https://instagram.com/andrebarbosaadv",
   },
 
   hero: {
-    eyebrow: "Lorem ipsum · dolor sit",
-    headline: "Lorem ipsum dolor sit amet,",
-    headlineEmphasis: "consectetur adipiscing.",
+    eyebrow: "André Barbosa · Advocacia Trabalhista",
+    headline: "Seus direitos",
+    headlineEmphasis: "não podem esperar.",
     subheadline:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    ctaPrimary: "Lorem ipsum dolor",
-    ctaSecondary: "Sit amet consectetur",
+      "Demissão injusta, verbas não pagas, assédio no trabalho. Existe lei, existe justiça — e existem direitos que devem ser respeitados.",
+    ctaPrimary: "Consulta gratuita",
+    ctaSecondary: "Ver áreas de atuação",
     stats: [
-      { value: "20+", label: "Anos de atuação" },
-      { value: "850", label: "Casos conduzidos" },
-      { value: "98%", label: "Satisfação" },
+      { value: "100%", label: "Foco em trabalhista" },
+      { value: "1ª", label: "Consulta gratuita" },
+      { value: "24h", label: "Resposta no WhatsApp" },
     ],
   },
 
   highlights: [
     {
-      icon: "MonitorSmartphone",
-      title: "Lorem ipsum dolor",
+      icon: "Gavel",
+      title: "Justiça que age rápido",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.",
+        "Análise técnica imediata do seu caso e início ágil das medidas — porque cada dia importa em ações trabalhistas.",
+    },
+    {
+      icon: "Handshake",
+      title: "Atendimento humanizado",
+      description:
+        "Linguagem clara, escuta atenta e contato direto com o advogado responsável. Sem juridiquês, sem promessas vazias.",
     },
     {
       icon: "ShieldCheck",
-      title: "Consectetur elit",
+      title: "Experiência e ética",
       description:
-        "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.",
-    },
-    {
-      icon: "Lock",
-      title: "Sit amet adipiscing",
-      description:
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.",
+        "Atuação pautada pelo Código de Ética da OAB, com sigilo absoluto e transparência total sobre prazos e honorários.",
     },
   ],
 
   about: {
-    eyebrow: "Quem nós somos",
-    title: "Lorem ipsum dolor sit amet, consectetur.",
-    name: "Lorem Ipsum",
-    role: "Advogado(a) — OAB/SP 000.000",
-    photo: "/about-photo.jpg",
+    eyebrow: "Sobre o escritório",
+    title:
+      "Defendemos quem foi desrespeitado pela empresa — com técnica e firmeza.",
+    name: "Dr. André Barbosa",
+    role: "Advogado Trabalhista — OAB/SP 00.000",
+    // photo: "/sobre.png", // adicionar foto quando disponível
     bio: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
-      "Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "O escritório André Barbosa Advocacia atua exclusivamente em Direito do Trabalho, com foco na defesa de trabalhadores que tiveram seus direitos violados — seja por demissão injusta, verbas rescisórias não pagas, assédio moral, jornada abusiva ou trabalho sem registro.",
+      "Cada caso é analisado com rigor técnico, transparência sobre os cenários reais e estratégia processual definida em conjunto com o cliente. Você sabe o que esperar em cada etapa — sem promessas, sem juridiquês.",
     ],
     credentials: [
-      "Lorem ipsum dolor sit — Universidade Ipsum",
-      "Pós-graduação em Lorem Ipsum",
-      "Membro da Comissão Lorem Ipsum da OAB",
-      "Autor de publicações em Lorem Ipsum",
+      "Especialização em Direito do Trabalho",
+      "Atuação em rescisões indiretas e ações revisionais",
+      "Defesa em casos de assédio moral e dano existencial",
+      "Acompanhamento direto do cliente em todas as fases",
     ],
-    stat: { value: "20+", label: "Anos no contencioso" },
+    stat: { value: "100%", label: "Foco em Direito Trabalhista" },
   },
 
   practiceAreas: [
     {
       icon: "Briefcase",
-      title: "Lorem Trabalhista",
+      title: "Verbas Rescisórias",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.",
+        "Cobrança de verbas não pagas: aviso prévio, férias, 13º, FGTS, multa e tudo o que é seu por direito após a demissão.",
+    },
+    {
+      icon: "AlertTriangle",
+      title: "Demissão Injusta",
+      description:
+        "Análise da legalidade da demissão por justa causa e reversão quando houver irregularidade na conduta da empresa.",
+    },
+    {
+      icon: "Clock",
+      title: "Horas Extras e Adicionais",
+      description:
+        "Cobrança de horas extras, adicional noturno, periculosidade, insalubridade e intervalos intra/interjornada não respeitados.",
+    },
+    {
+      icon: "ShieldAlert",
+      title: "Assédio Moral",
+      description:
+        "Indenização por danos morais em casos de humilhação, perseguição, sobrecarga abusiva e situações degradantes no trabalho.",
+    },
+    {
+      icon: "FileX",
+      title: "Trabalho Sem Registro",
+      description:
+        "Reconhecimento de vínculo empregatício e cobrança retroativa de todas as verbas devidas pelo período trabalhado.",
     },
     {
       icon: "Heart",
-      title: "Ipsum de Família",
+      title: "Direito de Família",
       description:
-        "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.",
-    },
-    {
-      icon: "ShoppingBag",
-      title: "Dolor do Consumidor",
-      description:
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.",
-    },
-    {
-      icon: "Scale",
-      title: "Sit amet Civil",
-      description:
-        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.",
-    },
-    {
-      icon: "Home",
-      title: "Consectetur Imobiliário",
-      description:
-        "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.",
-    },
-    {
-      icon: "FileText",
-      title: "Adipiscing Preventiva",
-      description:
-        "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur.",
+        "Atuação complementar em guarda, pensão alimentícia, divórcio e planejamento familiar.",
     },
   ],
 
   process: [
     {
       step: "01",
-      title: "Lorem ipsum",
+      title: "Primeiro contato",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.",
+        "Você nos chama pelo WhatsApp e descreve resumidamente sua situação. Confirmamos disponibilidade.",
     },
     {
       step: "02",
-      title: "Dolor sit amet",
+      title: "Consulta gratuita",
       description:
-        "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+        "Marcamos a consulta inicial sem custo. Analisamos documentos e avaliamos a viabilidade do caso.",
     },
     {
       step: "03",
-      title: "Consectetur elit",
+      title: "Estratégia e proposta",
       description:
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+        "Apresentamos a melhor estratégia, prazos realistas e honorários por escrito antes de qualquer compromisso.",
     },
     {
       step: "04",
-      title: "Adipiscing veniam",
+      title: "Ação e acompanhamento",
       description:
-        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.",
+        "Conduzimos o processo com atualizações periódicas e canal direto pra dúvidas — sem você correr atrás.",
     },
   ],
 
   testimonials: [
     {
-      name: "Lorem S.",
-      role: "Cliente — Trabalhista",
-      initials: "LS",
+      name: "Cliente",
+      role: "Rescisão indireta",
+      initials: "CL",
       quote:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "O Dr. André foi atencioso desde o primeiro contato. Conseguiu reverter minha demissão por justa causa e ainda ganhei todas as verbas devidas.",
     },
     {
-      name: "Ipsum P.",
-      role: "Cliente — Consumidor",
-      initials: "IP",
+      name: "Cliente",
+      role: "Horas extras",
+      initials: "CL",
       quote:
-        "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "Trabalhei anos sem receber horas extras corretamente. Em poucos meses o escritório conseguiu o pagamento retroativo. Recomendo demais.",
     },
     {
-      name: "Dolor L.",
-      role: "Cliente — Família",
-      initials: "DL",
+      name: "Cliente",
+      role: "Assédio moral",
+      initials: "CL",
       quote:
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "Profissional sério, ético e que trata o cliente como gente. Me senti acolhida e respeitada durante todo o processo.",
     },
   ],
 
   faq: [
     {
-      question: "Lorem ipsum dolor sit amet?",
+      question: "A primeira consulta é mesmo gratuita?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "Sim. A análise inicial do seu caso é gratuita e sem compromisso. Você apresenta a situação, avaliamos a viabilidade jurídica e só seguimos se fizer sentido pra você.",
     },
     {
-      question: "Consectetur adipiscing elit, sed do eiusmod?",
+      question: "Quanto custa contratar o escritório?",
       answer:
-        "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "Em ações trabalhistas geralmente trabalhamos com honorários ad exitum — você só paga se ganhar a causa, com um percentual combinado por escrito antes de iniciar.",
     },
     {
-      question: "Duis aute irure dolor in reprehenderit?",
+      question: "Quanto tempo demora um processo trabalhista?",
       answer:
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "Depende da complexidade e da Vara, mas processos trabalhistas levam em média de 8 a 18 meses. Apresentamos uma estimativa realista na análise inicial.",
     },
     {
-      question: "Excepteur sint occaecat cupidatat non proident?",
+      question: "Já fui demitido por justa causa — ainda posso reverter?",
       answer:
-        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "Sim, em muitos casos a justa causa aplicada pela empresa é irregular ou desproporcional. Vale a pena fazer uma análise técnica antes de aceitar a demissão.",
     },
     {
-      question: "Nemo enim ipsam voluptatem quia voluptas?",
+      question: "Vocês atendem presencial ou só online?",
       answer:
-        "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores.",
+        "Atendemos das duas formas. Consultas e acompanhamento podem ser totalmente online por videochamada e WhatsApp, ou presenciais no escritório quando preferir.",
     },
   ],
 };

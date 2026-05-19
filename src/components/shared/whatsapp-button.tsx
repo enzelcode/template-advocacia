@@ -1,40 +1,51 @@
-import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { whatsappLink } from "@/lib/whatsapp";
 import { WhatsappIcon } from "@/components/shared/brand-icons";
 
+type Tone = "navy" | "gold" | "outline-light" | "outline-dark";
+
 type WhatsappButtonProps = {
   label: string;
   message?: string;
+  tone?: Tone;
   size?: "default" | "lg";
-  variant?: "default" | "outline" | "secondary";
   className?: string;
+};
+
+const toneStyles: Record<Tone, string> = {
+  navy:
+    "bg-[color:var(--brand-navy)] text-white hover:bg-[color:var(--brand-navy)] hover:brightness-110",
+  gold:
+    "bg-[color:var(--brand-gold)] text-[color:var(--brand-navy)] hover:bg-[color:var(--brand-gold)] hover:brightness-105",
+  "outline-light":
+    "border border-white/30 bg-white/5 text-white backdrop-blur hover:bg-white/12 hover:border-white/50",
+  "outline-dark":
+    "border border-[color:var(--brand-navy)]/20 bg-transparent text-[color:var(--brand-navy)] hover:bg-[color:var(--brand-navy)]/5",
 };
 
 export function WhatsappButton({
   label,
   message,
+  tone = "navy",
   size = "lg",
-  variant = "default",
   className,
 }: WhatsappButtonProps) {
   return (
-    <Button
-      size={size}
-      variant={variant}
-      nativeButton={false}
-      render={
-        <a href={whatsappLink(message)} target="_blank" rel="noopener noreferrer" />
-      }
+    <a
+      href={whatsappLink(message)}
+      target="_blank"
+      rel="noopener noreferrer"
       className={cn(
-        "group relative h-12 gap-2.5 rounded-full px-7 text-sm font-medium tracking-wide",
-        "transition-all duration-300 hover:translate-y-[-1px] hover:shadow-lg hover:shadow-[color:var(--brand-navy)]/15",
+        "group inline-flex items-center gap-2.5 rounded-full font-medium tracking-wide whitespace-nowrap",
+        "transition-all duration-300 hover:-translate-y-[1px] hover:shadow-lg hover:shadow-black/15",
+        size === "lg" ? "h-12 px-7 text-sm" : "h-10 px-5 text-sm",
+        toneStyles[tone],
         className,
       )}
     >
       <WhatsappIcon className="size-[18px]" />
       {label}
       <span aria-hidden className="ml-1 transition-transform duration-300 group-hover:translate-x-1">→</span>
-    </Button>
+    </a>
   );
 }

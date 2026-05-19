@@ -3,6 +3,7 @@
 import { siteConfig } from "@/config/site";
 import { Icon } from "@/components/shared/icon";
 import { Container } from "@/components/shared/container";
+import { WhatsappButton } from "@/components/shared/whatsapp-button";
 import { useReveal } from "@/hooks/use-reveal";
 
 export function PracticeAreas() {
@@ -28,12 +29,12 @@ export function PracticeAreas() {
               </p>
             </div>
             <h2 className="reveal mt-6 font-heading text-3xl font-normal leading-tight text-[color:var(--brand-navy)] sm:text-5xl text-balance">
-              Lorem ipsum dolor sit amet,{" "}
-              <span className="italic font-light">consectetur</span>.
+              Onde podemos{" "}
+              <span className="italic font-light">te ajudar</span>.
             </h2>
           </div>
           <p className="reveal text-sm text-muted-foreground max-w-xs">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.
+            Atuação técnica em direito civil, trabalhista, previdenciário e do consumidor.
           </p>
         </div>
 
@@ -62,11 +63,6 @@ export function PracticeAreas() {
                 {area.description}
               </p>
 
-              <span className="mt-auto inline-flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.22em] text-[color:var(--brand-navy)]/70 transition-all duration-300 group-hover:text-[color:var(--brand-gold)] group-hover:gap-3">
-                Saber mais
-                <span aria-hidden>→</span>
-              </span>
-
               {/* Hairline gold no hover */}
               <span
                 aria-hidden
@@ -74,6 +70,14 @@ export function PracticeAreas() {
               />
             </article>
           ))}
+        </div>
+
+        {/* CTA fim da seção */}
+        <div className="reveal mt-16 flex flex-col items-center gap-5 text-center">
+          <p className="max-w-md text-sm text-muted-foreground text-pretty">
+            Sua causa não está na lista? Chama no WhatsApp — avaliamos a viabilidade jurídica do seu caso sem compromisso.
+          </p>
+          <WhatsappButton label="Tirar minha dúvida" tone="navy" />
         </div>
       </Container>
     </section>
