@@ -5,11 +5,13 @@ import { WhatsappButton } from "@/components/shared/whatsapp-button";
 import { ContactForm } from "@/components/shared/contact-form";
 import { Container } from "@/components/shared/container";
 import { useReveal } from "@/hooks/use-reveal";
+import { hasWhatsapp } from "@/lib/whatsapp";
 import { Mail, MapPin, Phone } from "lucide-react";
 
 export function Contact() {
   const ref = useReveal<HTMLElement>();
   const { contact } = siteConfig;
+  const wa = hasWhatsapp();
 
   return (
     <section
@@ -49,8 +51,9 @@ export function Contact() {
             .
           </h2>
           <p className="reveal mx-auto mt-6 max-w-lg text-base leading-relaxed text-white/70 text-pretty">
-            Preencha o formulário e sua mensagem abre direto no nosso WhatsApp.
-            Se preferir, fale por um dos canais ao lado.
+            {wa
+              ? "Preencha o formulário e sua mensagem abre direto no nosso WhatsApp. Se preferir, fale por um dos canais ao lado."
+              : "Preencha o formulário com sua situação. Retornamos pelo seu e-mail ou telefone em até 24h em dias úteis."}
           </p>
         </div>
 
@@ -111,9 +114,11 @@ export function Contact() {
               <p className="mt-3 text-sm leading-relaxed text-white/70">
                 Resposta em até 24h em dias úteis. Consultas mediante agendamento — presencial ou online.
               </p>
-              <div className="mt-5">
-                <WhatsappButton label="Falar pelo WhatsApp" tone="gold" />
-              </div>
+              {wa ? (
+                <div className="mt-5">
+                  <WhatsappButton label="Falar pelo WhatsApp" tone="gold" />
+                </div>
+              ) : null}
             </div>
           </div>
         </div>

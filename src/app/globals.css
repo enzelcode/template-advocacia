@@ -49,27 +49,28 @@
 }
 
 :root {
-  /* Paleta Jonathan Lopes: azul marinho clássico + dourado + branco + cinzas frios. */
+  /* Paleta Jean Carlos: azul royal + dourado + branco + cinzas frios. Acento vermelho discreto para alertas. */
   --background: #ffffff;
-  --foreground: #0d1a2e;
+  --foreground: #0b1830;
   --card: #ffffff;
-  --card-foreground: #0d1a2e;
+  --card-foreground: #0b1830;
   --popover: #ffffff;
-  --popover-foreground: #0d1a2e;
-  --primary: #0d2240;
+  --popover-foreground: #0b1830;
+  --primary: #0a2a5e;
   --primary-foreground: #ffffff;
-  --secondary: #f1f3f8;
-  --secondary-foreground: #0d2240;
-  --muted: #f1f3f8;
-  --muted-foreground: #5a657a;
-  --accent: #c8a85c;
-  --accent-foreground: #0d2240;
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: #dde2ec;
-  --input: #dde2ec;
-  --ring: #c8a85c;
-  --brand-gold: #c8a85c;
-  --brand-navy: #0d2240;
+  --secondary: #eef2fa;
+  --secondary-foreground: #0a2a5e;
+  --muted: #eef2fa;
+  --muted-foreground: #56627a;
+  --accent: #c9a04e;
+  --accent-foreground: #0a2a5e;
+  --destructive: #b91c1c;
+  --border: #dbe1ee;
+  --input: #dbe1ee;
+  --ring: #c9a04e;
+  --brand-gold: #c9a04e;
+  --brand-navy: #0a2a5e;
+  --brand-red: #b91c1c;
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
   --chart-3: oklch(0.439 0 0);

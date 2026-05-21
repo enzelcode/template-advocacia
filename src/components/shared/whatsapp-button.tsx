@@ -1,5 +1,6 @@
+import { MessageCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { whatsappLink } from "@/lib/whatsapp";
+import { whatsappLink, hasWhatsapp } from "@/lib/whatsapp";
 import { WhatsappIcon } from "@/components/shared/brand-icons";
 
 type Tone = "navy" | "gold" | "outline-light" | "outline-dark";
@@ -30,11 +31,12 @@ export function WhatsappButton({
   size = "lg",
   className,
 }: WhatsappButtonProps) {
+  const wa = hasWhatsapp();
+  const Icon = wa ? WhatsappIcon : MessageCircle;
   return (
     <a
       href={whatsappLink(message)}
-      target="_blank"
-      rel="noopener noreferrer"
+      {...(wa ? { target: "_blank", rel: "noopener noreferrer" } : {})}
       className={cn(
         "group inline-flex items-center gap-2.5 rounded-full font-medium tracking-wide whitespace-nowrap",
         "transition-all duration-300 hover:-translate-y-[1px] hover:shadow-lg hover:shadow-black/15",
@@ -43,7 +45,7 @@ export function WhatsappButton({
         className,
       )}
     >
-      <WhatsappIcon className="size-[18px]" />
+      <Icon className="size-[18px]" />
       {label}
       <span aria-hidden className="ml-1 transition-transform duration-300 group-hover:translate-x-1">→</span>
     </a>

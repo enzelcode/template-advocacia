@@ -1,7 +1,8 @@
-import { whatsappLink } from "@/lib/whatsapp";
+import { whatsappLink, hasWhatsapp } from "@/lib/whatsapp";
 import { WhatsappIcon } from "@/components/shared/brand-icons";
 
 export function WhatsappFab() {
+  if (!hasWhatsapp()) return null;
   return (
     <a
       href={whatsappLink()}

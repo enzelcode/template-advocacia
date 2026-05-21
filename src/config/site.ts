@@ -1,8 +1,8 @@
 /**
  * Configuração do site — TUDO que muda por cliente fica aqui.
  *
- * Branch: jonathan-lopes
- * Cliente: Advogado Jonathan Lopes (Direito do Empregado)
+ * Branch: jean-carlos
+ * Cliente: Advogado Jean Carlos (Trabalhista — Demissão e Assédio)
  */
 
 export type PracticeArea = {
@@ -100,97 +100,107 @@ export type SiteConfig = {
 };
 
 export const siteConfig: SiteConfig = {
-  name: "Jonathan Lopes Advocacia",
-  shortName: "Jonathan Lopes",
-  oab: "OAB/DF 00.000", // ← preencher com OAB real
-  tagline: "Especialista em Direito do Empregado",
+  name: "Jean Carlos Advocacia",
+  shortName: "Jean Carlos",
+  oab: "OAB/UF 00.000", // ← preencher com OAB real
+  tagline: "Advogado Trabalhista · Demissão e Assédio",
   description:
-    "Advocacia trabalhista especializada em direito do empregado — verbas, horas extras, assédio e reconhecimento de vínculo. Análise técnica e atendimento humanizado.",
-  url: "https://template-advocacia-git-jonathan-lopes.vercel.app",
+    "Advocacia trabalhista focada em demissão indevida, assédio moral e direitos ignorados. Análise técnica do seu caso, linguagem direta e estratégia clara — pra você não perder o que é seu por direito.",
+  url: "https://template-advocacia-git-jean-carlos.vercel.app",
 
-  // Sem arquivo de logo — o header renderiza a marca inline (ícone de balança + serifa)
+  // Sem arquivo de logo — o header renderiza a marca inline (ícone + serifa)
 
   contact: {
-    phone: "(61) 8652-1233",
-    whatsapp:
-      "https://api.whatsapp.com/message/2GKIBEWLKGXEB1?autoload=1&app_absent=0",
-    whatsappMessage:
-      "Olá, Dr. Jonathan. Vim pelo site e gostaria de tirar uma dúvida trabalhista.",
-    email: "jonathan.rodrigo_df@hotmail.com",
-    address: "Brasília · DF",
+    // Sem telefone/WhatsApp ainda — o site cai pro formulário e e-mail.
+    phone: "",
+    whatsapp: "",
+    whatsappMessage: "",
+    email: "contato@jeancarlosadvocacia.com.br",
+    address: "",
   },
 
   social: {
-    instagram: "https://www.instagram.com/jonathanroodrigo/",
-    facebook: "https://www.facebook.com/adv.jonathanrodrigo",
-    linkedin: "https://www.linkedin.com/in/jonathan-lopes-799551236",
+    instagram: "https://www.instagram.com/adv.jeancarlosoficial/",
   },
 
   hero: {
-    eyebrow: "Jonathan Lopes · Direito do Empregado",
-    headline: "Conhecer seus direitos",
-    headlineEmphasis: "faz toda a diferença.",
+    eyebrow: "Jean Carlos · Advogado Trabalhista",
+    headline: "Você pode estar perdendo",
+    headlineEmphasis: "o que é seu por direito.",
     subheadline:
-      "Análise técnica de contratos e verbas trabalhistas, defesa do empregado e orientação jurídica segura — pra você receber o que é seu por direito.",
+      "Demissão indevida, assédio moral, direitos ignorados — análise técnica do seu caso com linguagem direta. Sem juridiquês, sem promessa vazia.",
     ctaPrimary: "Falar com o advogado",
     ctaSecondary: "Áreas de atuação",
     stats: [
       { value: "100%", label: "Foco em trabalhista" },
       { value: "Online", label: "Atendimento em todo Brasil" },
-      { value: "24h", label: "Resposta no WhatsApp" },
+      { value: "24h", label: "Resposta às mensagens" },
     ],
   },
 
   highlights: [
     {
-      icon: "Scale",
-      title: "Análise técnica segura",
+      icon: "ShieldAlert",
+      title: "Demissão e assédio",
       description:
-        "Cada caso é estudado a fundo antes de qualquer estratégia. Você recebe um parecer claro sobre viabilidade e prazos.",
+        "Atuação direta em demissão indevida, rescisão indireta e assédio moral — com análise técnica de provas e estratégia clara.",
+    },
+    {
+      icon: "Scale",
+      title: "Direitos ignorados",
+      description:
+        "Verbas não pagas, horas extras, adicionais e vínculo não reconhecido. Cada caso estudado a fundo antes de qualquer estratégia.",
     },
     {
       icon: "Handshake",
-      title: "Atendimento humanizado",
+      title: "Linguagem direta",
       description:
-        "Linguagem acessível, escuta atenta e contato direto com o advogado. Sem juridiquês e sem promessas vazias.",
-    },
-    {
-      icon: "ShieldCheck",
-      title: "Sigilo e ética",
-      description:
-        "Atuação pautada pelo Código de Ética da OAB, com sigilo absoluto sobre todas as informações compartilhadas.",
+        "Você sabe o que esperar em cada etapa: cenários reais, prazos honestos e contato direto com o advogado. Sem juridiquês.",
     },
   ],
 
   about: {
     eyebrow: "Sobre o escritório",
-    title: "Defesa técnica de quem trabalha — com presença e estratégia.",
-    name: "Dr. Jonathan Lopes",
-    role: "Advogado — OAB/DF 00.000",
-    photo: "/j.png",
+    title: "Defesa técnica do trabalhador — com estratégia e transparência.",
+    name: "Dr. Jean Carlos",
+    role: "Advogado — OAB/UF 00.000",
+    // Sem foto ainda → seção Sobre renderiza placeholder texturizado com a inicial.
+    photo: undefined,
     bio: [
-      "Jonathan Lopes Advocacia atua exclusivamente em Direito do Trabalho, com foco na defesa de empregados que tiveram seus direitos violados — seja por verbas não pagas, demissão indevida, assédio moral ou trabalho sem registro.",
-      "Cada caso é conduzido com análise técnica rigorosa, transparência sobre prazos e probabilidades reais. Você sabe o que esperar em cada etapa, sem juridiquês.",
+      "Jean Carlos Advocacia atua exclusivamente em Direito do Trabalho, com foco na defesa de empregados que tiveram seus direitos violados — seja por demissão indevida, assédio moral, verbas não pagas ou trabalho sem registro.",
+      "Cada caso é conduzido com análise técnica rigorosa, transparência sobre prazos e probabilidades reais. Você sabe o que esperar em cada etapa, sem juridiquês e sem promessa vazia.",
     ],
     credentials: [
-      "Especialização em Direito do Trabalho",
-      "Atuação em rescisões indiretas e horas extras",
-      "Análise de contratos e verbas trabalhistas",
+      "Atuação em demissão indevida e rescisão indireta",
       "Defesa em casos de assédio moral",
+      "Recuperação de verbas e direitos ignorados",
+      "Análise de contratos e horas extras",
     ],
     stat: { value: "100%", label: "Atuação trabalhista" },
   },
 
   practiceAreas: [
     {
-      id: "empregado",
-      label: "Empregado",
+      id: "trabalhador",
+      label: "Trabalhador",
       areas: [
         {
-          icon: "Briefcase",
-          title: "Verbas Rescisórias",
+          icon: "ShieldAlert",
+          title: "Assédio Moral",
           description:
-            "Cobrança de aviso prévio, férias, 13º, FGTS, multa e tudo o que é seu por direito após a demissão.",
+            "Indenização por danos morais em casos de humilhação, perseguição, pressão abusiva ou sobrecarga injustificada no trabalho.",
+        },
+        {
+          icon: "Gavel",
+          title: "Demissão Indevida",
+          description:
+            "Demissão sem justa causa mal calculada, descontos abusivos ou justa causa aplicada de forma irregular — você não precisa aceitar.",
+        },
+        {
+          icon: "FileX",
+          title: "Direitos Ignorados",
+          description:
+            "Verbas trabalhistas não pagas, FGTS em atraso, 13º, férias e benefícios suprimidos durante ou após o vínculo.",
         },
         {
           icon: "Clock",
@@ -199,28 +209,16 @@ export const siteConfig: SiteConfig = {
             "Horas extras, adicional noturno, intervalos não respeitados e jornada excessiva — com cálculos detalhados.",
         },
         {
-          icon: "FileX",
-          title: "Trabalho Sem Registro",
-          description:
-            "Reconhecimento de vínculo empregatício e cobrança retroativa de todas as verbas devidas pelo período.",
-        },
-        {
-          icon: "ShieldAlert",
-          title: "Assédio Moral",
-          description:
-            "Indenização por danos morais em casos de humilhação, perseguição ou sobrecarga abusiva no trabalho.",
-        },
-        {
-          icon: "Gavel",
+          icon: "Briefcase",
           title: "Rescisão Indireta",
           description:
-            "Quando a empresa comete falta grave, você pode pedir rescisão e receber todas as verbas como demissão sem justa causa.",
+            "Quando a empresa comete falta grave, você pode pedir rescisão e receber todas as verbas como se fosse demissão sem justa causa.",
         },
         {
           icon: "AlertTriangle",
-          title: "Adicionais e Periculosidade",
+          title: "Trabalho Sem Registro",
           description:
-            "Insalubridade, periculosidade e demais adicionais não pagos durante o vínculo empregatício.",
+            "Reconhecimento de vínculo empregatício e cobrança retroativa de todas as verbas devidas pelo período não registrado.",
         },
       ],
     },
@@ -231,7 +229,7 @@ export const siteConfig: SiteConfig = {
       step: "01",
       title: "Primeiro contato",
       description:
-        "Você nos chama pelo WhatsApp e descreve resumidamente sua situação. Confirmamos disponibilidade.",
+        "Você nos chama pelo formulário ou Instagram e descreve resumidamente sua situação. Confirmamos disponibilidade.",
     },
     {
       step: "02",
@@ -256,10 +254,17 @@ export const siteConfig: SiteConfig = {
   testimonials: [
     {
       name: "Cliente",
-      role: "Verbas rescisórias",
+      role: "Assédio moral",
       initials: "CL",
       quote:
-        "Atendimento atencioso desde o primeiro contato. Recebi todas as verbas que a empresa não tinha pago e o Dr. Jonathan explicou tudo com clareza.",
+        "Profissional sério, ético e que escuta de verdade. Me senti respeitada durante todo o processo e o resultado superou a expectativa.",
+    },
+    {
+      name: "Cliente",
+      role: "Demissão indevida",
+      initials: "CL",
+      quote:
+        "Fui demitido de forma irregular e quase aceitei o que ofereceram. O Dr. Jean revisou tudo e recuperei valores que nem sabia que tinha direito.",
     },
     {
       name: "Cliente",
@@ -268,20 +273,18 @@ export const siteConfig: SiteConfig = {
       quote:
         "Trabalhei como autônomo por anos, mas era empregado de verdade. O escritório conseguiu o reconhecimento do vínculo e todas as verbas retroativas.",
     },
-    {
-      name: "Cliente",
-      role: "Assédio moral",
-      initials: "CL",
-      quote:
-        "Profissional sério, ético e que escuta de verdade. Me senti respeitada durante todo o processo.",
-    },
   ],
 
   faq: [
     {
+      question: "Como saber se sofri assédio moral no trabalho?",
+      answer:
+        "Humilhações públicas, perseguição constante, metas impossíveis, isolamento, gritos ou pressão psicológica recorrente podem caracterizar assédio. Na análise inicial avaliamos os indícios, provas possíveis (mensagens, áudios, testemunhas) e a viabilidade do caso.",
+    },
+    {
       question: "Qual o prazo para entrar com uma ação trabalhista?",
       answer:
-        "O prazo é de até 2 anos após o término do contrato de trabalho. Dentro desse período, é possível cobrar valores referentes aos últimos 5 anos. Por isso, agir rápido faz diferença.",
+        "O prazo é de até 2 anos após o término do contrato de trabalho. Dentro desse período, é possível cobrar valores referentes aos últimos 5 anos. Agir rápido faz diferença.",
     },
     {
       question: "A primeira consulta é gratuita?",
@@ -301,7 +304,7 @@ export const siteConfig: SiteConfig = {
     {
       question: "Atende presencial ou só online?",
       answer:
-        "Atendo das duas formas. Consultas podem ser totalmente online por videochamada e WhatsApp, ou presenciais em Brasília quando preferir.",
+        "Atendo das duas formas. Consultas podem ser totalmente online por videochamada, ou presenciais conforme combinado.",
     },
   ],
 };

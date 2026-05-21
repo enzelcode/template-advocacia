@@ -9,7 +9,7 @@ import {
 } from "@/components/shared/brand-icons";
 import { BrandMark } from "@/components/shared/brand-mark";
 import { Container } from "@/components/shared/container";
-import { whatsappLink } from "@/lib/whatsapp";
+import { whatsappLink, hasWhatsapp } from "@/lib/whatsapp";
 
 const navLinks = [
   { href: "#sobre", label: "Sobre" },
@@ -49,15 +49,17 @@ export function Footer() {
             </p>
 
             <div className="mt-8 flex items-center gap-3">
-              <Link
-                href={whatsappLink()}
-                aria-label="WhatsApp"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="grid size-10 place-items-center rounded-full border border-border/70 text-muted-foreground transition-all hover:border-[color:var(--brand-gold)] hover:text-[color:var(--brand-gold)]"
-              >
-                <WhatsappIcon className="size-4" />
-              </Link>
+              {hasWhatsapp() ? (
+                <Link
+                  href={whatsappLink()}
+                  aria-label="WhatsApp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="grid size-10 place-items-center rounded-full border border-border/70 text-muted-foreground transition-all hover:border-[color:var(--brand-gold)] hover:text-[color:var(--brand-gold)]"
+                >
+                  <WhatsappIcon className="size-4" />
+                </Link>
+              ) : null}
               {social.instagram ? (
                 <Link
                   href={social.instagram}

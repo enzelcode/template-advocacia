@@ -1,4 +1,4 @@
-import { Scale } from "lucide-react";
+import { Gavel } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 
@@ -8,7 +8,7 @@ type BrandMarkProps = {
 };
 
 /**
- * Logo inline (ícone de balança em pílula dourada + nome serifado + subtitle).
+ * Logo inline (ícone de martelo em pílula dourada + nome serifado + subtitle).
  * Usado quando não há um arquivo de logo (siteConfig.logo) — fallback bonitinho.
  */
 export function BrandMark({ variant = "dark", size = "default" }: BrandMarkProps) {
@@ -25,7 +25,7 @@ export function BrandMark({ variant = "dark", size = "default" }: BrandMarkProps
           size === "lg" ? "size-14" : "size-11",
         )}
       >
-        <Scale className={size === "lg" ? "size-6" : "size-5"} />
+        <Gavel className={size === "lg" ? "size-6" : "size-5"} />
       </span>
       <div className="flex flex-col leading-none">
         <span

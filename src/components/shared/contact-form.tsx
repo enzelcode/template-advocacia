@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import { Mail } from "lucide-react";
 import { siteConfig } from "@/config/site";
-import { whatsappLink } from "@/lib/whatsapp";
+import { whatsappLink, hasWhatsapp } from "@/lib/whatsapp";
 import { WhatsappIcon } from "@/components/shared/brand-icons";
 import { cn } from "@/lib/utils";
 
@@ -17,7 +18,7 @@ type Field = {
 const fields: Field[] = [
   { id: "name", label: "Nome", type: "text", placeholder: "Como podemos te chamar?", required: true },
   { id: "phone", label: "Telefone", type: "tel", placeholder: "(DDD) número", required: true },
-  { id: "subject", label: "Área de interesse", type: "text", placeholder: "Ex: Direito Trabalhista" },
+  { id: "subject", label: "Área de interesse", type: "text", placeholder: "Ex: Demissão, Assédio Moral" },
   { id: "message", label: "Mensagem", type: "textarea", placeholder: "Conte resumidamente sua situação", required: true },
 ];
 
@@ -25,23 +26,51 @@ const initialState = { name: "", phone: "", subject: "", message: "" };
 
 export function ContactForm() {
   const [data, setData] = useState(initialState);
+  const wa = hasWhatsapp();
+  const Icon = wa ? WhatsappIcon : Mail;
+  const ctaLabel = wa ? "Enviar pelo WhatsApp" : "Enviar por e-mail";
+  const helperText = wa
+    ? "Ao enviar, sua mensagem abre direto no WhatsApp do escritório. Resposta em até 24h em dias úteis."
+    : "Ao enviar, sua mensagem abre no seu app de e-mail. Resposta em até 24h em dias úteis.";
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const parts = [
+
+    if (wa) {
+      const parts = [
+        `Olá, vim pelo site da ${siteConfig.shortName} Advocacia.`,
+        "",
+        `*Nome:* ${data.name}`,
+        `*Telefone:* ${data.phone}`,
+        data.subject ? `*Área:* ${data.subject}` : null,
+        "",
+        `*Mensagem:*`,
+        data.message,
+      ]
+        .filter(Boolean)
+        .join("\n");
+
+      window.open(whatsappLink(parts), "_blank", "noopener,noreferrer");
+      return;
+    }
+
+    const subject = `Contato pelo site — ${data.name}${data.subject ? ` — ${data.subject}` : ""}`;
+    const body = [
       `Olá, vim pelo site da ${siteConfig.shortName} Advocacia.`,
       "",
-      `*Nome:* ${data.name}`,
-      `*Telefone:* ${data.phone}`,
-      data.subject ? `*Área:* ${data.subject}` : null,
+      `Nome: ${data.name}`,
+      `Telefone: ${data.phone}`,
+      data.subject ? `Área: ${data.subject}` : null,
       "",
-      `*Mensagem:*`,
+      `Mensagem:`,
       data.message,
     ]
       .filter(Boolean)
       .join("\n");
 
-    window.open(whatsappLink(parts), "_blank", "noopener,noreferrer");
+    window.location.href = `mailto:${siteConfig.contact.email}?subject=${encodeURIComponent(
+      subject,
+    )}&body=${encodeURIComponent(body)}`;
   }
 
   return (
@@ -94,13 +123,13 @@ export function ContactForm() {
           "transition-all duration-300 hover:-translate-y-[1px] hover:brightness-105 hover:shadow-lg hover:shadow-black/20",
         )}
       >
-        <WhatsappIcon className="size-[18px]" />
-        Enviar pelo WhatsApp
+        <Icon className="size-[18px]" />
+        {ctaLabel}
         <span aria-hidden className="ml-1 transition-transform duration-300 group-hover:translate-x-1">→</span>
       </button>
 
       <p className="text-[11px] leading-relaxed text-white/40 text-pretty">
-        Ao enviar, sua mensagem abre direto no WhatsApp do escritório. Resposta em até 24h em dias úteis.
+        {helperText}
       </p>
     </form>
   );
