@@ -66,13 +66,27 @@ export function Header() {
             onClick={() => setOpen(false)}
           >
             {siteConfig.logo ? (
-              <Image
-                src={siteConfig.logo.src}
-                alt={siteConfig.logo.alt}
-                width={siteConfig.logo.width}
-                height={siteConfig.logo.height}
-                priority
-                className="h-12 w-auto sm:h-14"
+              // Logo renderizada via CSS mask pra permitir troca de cor
+              // dinâmica: dourada sobre o hero (transparente / mobile menu
+              // aberto), verde quando a navbar fica fixa sobre fundo branco.
+              <span
+                role="img"
+                aria-label={siteConfig.logo.alt}
+                className={cn(
+                  "block h-12 transition-colors duration-300 sm:h-14",
+                  scrolled && !open
+                    ? "bg-[color:var(--brand-green)]"
+                    : "bg-[color:var(--brand-gold)]",
+                )}
+                style={{
+                  aspectRatio: `${siteConfig.logo.width} / ${siteConfig.logo.height}`,
+                  maskImage: `url(${siteConfig.logo.src})`,
+                  WebkitMaskImage: `url(${siteConfig.logo.src})`,
+                  maskSize: "100% 100%",
+                  WebkitMaskSize: "100% 100%",
+                  maskRepeat: "no-repeat",
+                  WebkitMaskRepeat: "no-repeat",
+                }}
               />
             ) : (
               <BrandMark variant={open || !scrolled ? "light" : "dark"} />

@@ -30,12 +30,21 @@ export function Footer() {
           {/* Brand */}
           <div>
             {siteConfig.logo ? (
-              <Image
-                src={siteConfig.logo.src}
-                alt={siteConfig.logo.alt}
-                width={siteConfig.logo.width}
-                height={siteConfig.logo.height}
-                className="h-16 w-auto"
+              // Footer tem fundo branco → logo renderizada em verde via CSS mask
+              // pra ter contraste forte (a fonte original é dourada).
+              <span
+                role="img"
+                aria-label={siteConfig.logo.alt}
+                className="block h-16 bg-[color:var(--brand-green)]"
+                style={{
+                  aspectRatio: `${siteConfig.logo.width} / ${siteConfig.logo.height}`,
+                  maskImage: `url(${siteConfig.logo.src})`,
+                  WebkitMaskImage: `url(${siteConfig.logo.src})`,
+                  maskSize: "100% 100%",
+                  WebkitMaskSize: "100% 100%",
+                  maskRepeat: "no-repeat",
+                  WebkitMaskRepeat: "no-repeat",
+                }}
               />
             ) : (
               <BrandMark size="lg" />
