@@ -7,11 +7,23 @@ type BrandMarkProps = {
 };
 
 /**
- * Logo inline — monograma "RA" serifado dourado em moldura quadrada + nome.
+ * Logo inline — monograma derivado das iniciais do shortName,
+ * serifado e dourado, em moldura quadrada + nome ao lado.
  * Usado quando não há um arquivo de logo (siteConfig.logo) — fallback bonitinho.
  */
+function getInitials(name: string) {
+  return name
+    .split(/\s+/)
+    .filter(Boolean)
+    .map((w) => w[0])
+    .join("")
+    .slice(0, 2)
+    .toUpperCase();
+}
+
 export function BrandMark({ variant = "dark", size = "default" }: BrandMarkProps) {
   const isLight = variant === "light";
+  const initials = getInitials(siteConfig.shortName);
 
   return (
     <div className="flex items-center gap-3">
@@ -31,7 +43,7 @@ export function BrandMark({ variant = "dark", size = "default" }: BrandMarkProps
             size === "lg" ? "text-xl" : "text-base",
           )}
         >
-          RA
+          {initials}
         </span>
       </span>
       <div className="flex flex-col leading-none">

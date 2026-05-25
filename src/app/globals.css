@@ -49,29 +49,30 @@
 }
 
 :root {
-  /* Paleta Ricardo Almeida: branco + preto + dourado quente. */
-  /* Nota: --brand-navy é mantido por compat com componentes do template, mas aqui é preto profundo. */
+  /* Paleta Allan Reis: branco + verde escuro premium + dourado em detalhes. */
+  /* Nota: --brand-navy/--brand-black são mantidos por compat com componentes do template, mas aqui ambos apontam pro verde escuro. */
   --background: #ffffff;
-  --foreground: #0a0a0a;
+  --foreground: #0e1f18;
   --card: #ffffff;
-  --card-foreground: #0a0a0a;
+  --card-foreground: #0e1f18;
   --popover: #ffffff;
-  --popover-foreground: #0a0a0a;
-  --primary: #0a0a0a;
+  --popover-foreground: #0e1f18;
+  --primary: #14342b;
   --primary-foreground: #ffffff;
-  --secondary: #f4f3ee;
-  --secondary-foreground: #0a0a0a;
-  --muted: #f4f3ee;
-  --muted-foreground: #5b5953;
+  --secondary: #eef3ef;
+  --secondary-foreground: #14342b;
+  --muted: #eef3ef;
+  --muted-foreground: #5a6b62;
   --accent: #c9a04e;
-  --accent-foreground: #0a0a0a;
+  --accent-foreground: #14342b;
   --destructive: oklch(0.577 0.245 27.325);
-  --border: #e6e3da;
-  --input: #e6e3da;
+  --border: #dde5df;
+  --input: #dde5df;
   --ring: #c9a04e;
   --brand-gold: #c9a04e;
-  --brand-navy: #0a0a0a;
-  --brand-black: #0a0a0a;
+  --brand-navy: #14342b;
+  --brand-black: #14342b;
+  --brand-green: #14342b;
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
   --chart-3: oklch(0.439 0 0);

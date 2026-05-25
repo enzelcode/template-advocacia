@@ -1,8 +1,8 @@
 /**
  * Configuração do site — TUDO que muda por cliente fica aqui.
  *
- * Branch: ricardo-almeida
- * Cliente: Advogado Ricardo Almeida (Advocacia e Assessoria Jurídica)
+ * Branch: allan-reis
+ * Cliente: Advogado Allan Reis (Advocacia · Maringá-PR)
  */
 
 export type PracticeArea = {
@@ -100,40 +100,36 @@ export type SiteConfig = {
 };
 
 export const siteConfig: SiteConfig = {
-  name: "Ricardo Almeida Advocacia",
-  shortName: "Ricardo Almeida",
-  oab: "OAB/SP 00.000", // ← preencher com OAB real
-  tagline: "Advocacia e Assessoria Jurídica",
+  name: "Allan Reis Advocacia",
+  shortName: "Allan Reis",
+  oab: "OAB/PR 00.000", // ← preencher com OAB real
+  tagline: "Defesa dos seus direitos com ética e excelência",
   description:
-    "Advocacia estratégica e personalizada — Direito Criminal, Família, Sucessões, Previdenciário, Civil e Consultoria Jurídica. Análise técnica e atendimento humanizado.",
-  url: "https://template-advocacia-git-ricardo-almeida.vercel.app",
+    "Escritório de advocacia comprometido com ética, transparência e excelência. Atendimento personalizado e atuação estratégica em múltiplas áreas do direito.",
+  url: "https://template-advocacia-git-allan-reis.vercel.app",
 
-  logo: {
-    src: "/ra.webp",
-    width: 1117,
-    height: 662,
-    alt: "Ricardo Almeida — Assessoria e Consultoria Jurídica",
-  },
+  // Sem arquivo de logo ainda — header e footer renderizam a marca inline
+  // (monograma "AR" derivado do shortName).
 
   contact: {
-    phone: "(11) 9 6535-2425",
-    whatsapp: "5511965352425",
+    phone: "(44) 99740-4433",
+    whatsapp: "5544997404433",
     whatsappMessage:
-      "Olá, Dr. Ricardo. Vim pelo site e gostaria de uma análise do meu caso.",
-    email: "drricardoalmeidaadv@gmail.com",
-    address: "São Paulo · SP",
+      "Olá, Dr. Allan. Vim pelo site e gostaria de uma análise do meu caso.",
+    email: "contato@allanreisadvocacia.com.br", // ← placeholder, preencher quando tiver
+    address: "Maringá · PR",
   },
 
   social: {
-    instagram: "https://www.instagram.com/adv.ricardoalmeida/",
+    instagram: "https://www.instagram.com/advocacia.allanreis/",
   },
 
   hero: {
-    eyebrow: "Ricardo Almeida · Advocacia & Assessoria Jurídica",
-    headline: "Seu direito,",
-    headlineEmphasis: "nossa missão.",
+    eyebrow: "Allan Reis · Advocacia",
+    headline: "Defesa dos seus direitos",
+    headlineEmphasis: "com ética e excelência.",
     subheadline:
-      "Atuação estratégica e personalizada para proteger os seus direitos. Direito Criminal, Família, Previdenciário e mais — análise técnica e atendimento humanizado.",
+      "Atendimento personalizado e atuação estratégica em múltiplas áreas do direito. Ética, transparência e excelência na prestação de serviços jurídicos.",
     ctaPrimary: "Falar com o advogado",
     ctaSecondary: "Áreas de atuação",
     stats: [
@@ -143,45 +139,46 @@ export const siteConfig: SiteConfig = {
     ],
   },
 
+  // Os 3 pilares da marca do Allan: Ética, Confiança, Dedicação
   highlights: [
     {
-      icon: "HeartHandshake",
-      title: "Atendimento humanizado e transparente",
+      icon: "ShieldCheck",
+      title: "Ética",
       description:
-        "Escuta atenta, linguagem acessível e contato direto com o advogado em todas as etapas. Sem juridiquês, sem promessa vazia.",
+        "Atuação pautada pelo Código de Ética da OAB, com sigilo absoluto e transparência total em todas as etapas do caso.",
+    },
+    {
+      icon: "HeartHandshake",
+      title: "Confiança",
+      description:
+        "Atendimento personalizado e contato direto com o advogado. Você sabe o que esperar em cada movimento.",
     },
     {
       icon: "Target",
-      title: "Foco em resultados",
+      title: "Dedicação",
       description:
-        "Estratégia desenhada caso a caso, com objetivos claros e prazos honestos. Você sabe o que esperar em cada movimento.",
-    },
-    {
-      icon: "Compass",
-      title: "Análise técnica e estratégica",
-      description:
-        "Cada caso é estudado a fundo antes de qualquer ação. Compromisso, técnica e ética em cada detalhe do seu caso.",
+        "Análise técnica rigorosa e busca constante pela melhor defesa dos seus direitos. Sem juridiquês, sem promessa vazia.",
     },
   ],
 
   about: {
     eyebrow: "Sobre o escritório",
-    title: "Cada cliente é único. Cada direito será respeitado.",
-    name: "Dr. Ricardo Almeida",
-    role: "Advogado — OAB/SP 00.000",
-    // Sem foto ainda → seção Sobre renderiza placeholder com a inicial.
+    title: "Defendendo seus direitos com excelência.",
+    name: "Dr. Allan Reis",
+    role: "Advogado — OAB/PR 00.000",
+    // Sem foto ainda → seção Sobre renderiza placeholder com monograma "AR".
     photo: undefined,
     bio: [
-      "Prazer, Ricardo Almeida. Atuo na advocacia com foco em soluções estratégicas, sempre buscando o melhor resultado pra cada cliente.",
-      "Compromisso, técnica e ética em cada detalhe do seu caso. Cada caso é único e merece uma análise especializada — defendendo seus direitos hoje, garantindo o seu amanhã.",
+      "Allan Reis Advocacia é um escritório comprometido com ética, transparência e excelência na prestação de serviços jurídicos. Bacharel em Direito pela Unicesumar desde 2018, atuo com dedicação e compromisso desde o início da minha trajetória na advocacia.",
+      "Meu compromisso é oferecer soluções jurídicas eficazes e personalizadas, sempre buscando a melhor defesa para os seus direitos.",
     ],
     credentials: [
-      "Direito Criminal e estratégia de defesa",
-      "Direito de Família e Sucessões",
-      "Direito Previdenciário e Civil",
-      "Assessoria e Consultoria Jurídica",
+      "Bacharel em Direito · Unicesumar (2018)",
+      "Atuação contínua na defesa de direitos",
+      "Atendimento personalizado e direto",
+      "Ética, transparência e excelência",
     ],
-    stat: { value: "6", label: "Áreas de atuação" },
+    stat: { value: "100%", label: "Atendimento personalizado" },
   },
 
   practiceAreas: [
@@ -203,7 +200,7 @@ export const siteConfig: SiteConfig = {
         },
         {
           icon: "ScrollText",
-          title: "Direito de Família e Sucessões",
+          title: "Família e Sucessões",
           description:
             "Planejamento sucessório, inventários, partilhas e testamentos — com cuidado, sigilo e segurança jurídica.",
         },
@@ -221,7 +218,7 @@ export const siteConfig: SiteConfig = {
         },
         {
           icon: "Briefcase",
-          title: "Assessoria e Consultoria Jurídica",
+          title: "Consultoria Jurídica",
           description:
             "Prevenção de conflitos e segurança jurídica para pessoas e empresas — assessoria contínua ou pontual.",
         },
@@ -262,7 +259,7 @@ export const siteConfig: SiteConfig = {
       role: "Direito de Família",
       initials: "CL",
       quote:
-        "Profissional sério, ético e que escuta de verdade. Resolveu meu divórcio com tranquilidade e respeito em todas as etapas.",
+        "Profissional sério, ético e que escuta de verdade. Resolveu meu caso com tranquilidade e respeito em todas as etapas.",
     },
     {
       name: "Cliente",
@@ -276,7 +273,7 @@ export const siteConfig: SiteConfig = {
       role: "Direito Criminal",
       initials: "CL",
       quote:
-        "Defesa técnica impecável. Senti segurança e clareza em todas as audiências — o Dr. Ricardo realmente domina o que faz.",
+        "Defesa técnica impecável. Senti segurança e clareza em todas as audiências — o Dr. Allan realmente domina o que faz.",
     },
   ],
 
@@ -284,7 +281,7 @@ export const siteConfig: SiteConfig = {
     {
       question: "Quais áreas o escritório atua?",
       answer:
-        "Direito Criminal, Família, Família e Sucessões, Previdenciário, Civil, além de Assessoria e Consultoria Jurídica para pessoas e empresas. Se o seu caso não se encaixa em nenhuma delas, dá pra avaliar na análise inicial.",
+        "Direito Criminal, Família, Família e Sucessões, Previdenciário, Civil e Consultoria Jurídica para pessoas e empresas. Se o seu caso não se encaixa em nenhuma delas, dá pra avaliar na análise inicial.",
     },
     {
       question: "Como funciona a primeira consulta?",
@@ -299,7 +296,7 @@ export const siteConfig: SiteConfig = {
     {
       question: "Atende presencial ou só online?",
       answer:
-        "Atendo das duas formas. Consultas podem ser totalmente online por videochamada e WhatsApp, ou presenciais em São Paulo mediante agendamento.",
+        "Atendo das duas formas. Consultas podem ser totalmente online por videochamada e WhatsApp, ou presenciais em Maringá-PR mediante agendamento.",
     },
     {
       question: "Em quanto tempo o caso anda?",
@@ -309,7 +306,7 @@ export const siteConfig: SiteConfig = {
     {
       question: "Posso falar diretamente com o advogado?",
       answer:
-        "Sim. O contato é direto com o Dr. Ricardo em todas as etapas, com atualizações periódicas e canal aberto pra dúvidas pelo WhatsApp.",
+        "Sim. O contato é direto comigo em todas as etapas, com atualizações periódicas e canal aberto pra dúvidas pelo WhatsApp.",
     },
   ],
 };

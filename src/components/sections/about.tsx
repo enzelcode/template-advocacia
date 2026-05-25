@@ -44,12 +44,18 @@ export function About() {
                         "repeating-linear-gradient(45deg, rgba(255,255,255,0.03) 0 1px, transparent 1px 18px)",
                     }}
                   />
-                  {/* Monograma RA gigante decorativo */}
+                  {/* Monograma gigante decorativo derivado do shortName */}
                   <span
                     aria-hidden
                     className="absolute inset-0 grid place-items-center font-heading text-[14rem] font-normal italic leading-none tracking-tighter text-[color:var(--brand-gold)]/30 select-none"
                   >
-                    RA
+                    {siteConfig.shortName
+                      .split(/\s+/)
+                      .filter(Boolean)
+                      .map((w) => w[0])
+                      .join("")
+                      .slice(0, 2)
+                      .toUpperCase()}
                   </span>
                   {/* Texto "FOTO EM BREVE" canto */}
                   <p className="absolute left-6 top-6 text-[10px] uppercase tracking-[0.28em] text-white/35">
