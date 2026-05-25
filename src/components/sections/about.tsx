@@ -11,14 +11,12 @@ export function About() {
   const { about } = siteConfig;
 
   return (
-    <section ref={ref} id="sobre" className="relative overflow-hidden py-28 sm:py-36">
-      <div aria-hidden className="bg-dots mask-radial-fade absolute inset-0 opacity-40" />
-
+    <section ref={ref} id="sobre" className="relative py-28 sm:py-36">
       <Container className="relative">
         <div className="grid gap-16 lg:grid-cols-[0.95fr_1.15fr] lg:gap-24 lg:items-center">
-          {/* Coluna imagem (foto ou placeholder se não tiver foto) */}
-          <div className="reveal relative">
-            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-md bg-[color:var(--brand-navy)]">
+          {/* Coluna imagem */}
+          <div className="reveal">
+            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-sm bg-[color:var(--brand-black)]">
               {about.photo ? (
                 <Image
                   src={about.photo}
@@ -30,50 +28,35 @@ export function About() {
                 />
               ) : (
                 <>
-                  {/* Placeholder textura quando não há foto */}
                   <div
                     aria-hidden
-                    className="absolute inset-0 opacity-60"
+                    className="absolute inset-0 opacity-50"
                     style={{
                       backgroundImage:
-                        "repeating-linear-gradient(45deg, rgba(255,255,255,0.05) 0 1px, transparent 1px 14px)",
+                        "repeating-linear-gradient(45deg, rgba(255,255,255,0.04) 0 1px, transparent 1px 18px)",
                     }}
                   />
-                  <div
-                    aria-hidden
-                    className="absolute inset-0 bg-gradient-to-tr from-[color:var(--brand-navy)] via-transparent to-[color:var(--brand-gold)]/30"
-                  />
-                  <span className="absolute -bottom-6 -right-2 font-heading text-[14rem] font-normal leading-none text-white/[0.08] select-none">
+                  <span className="absolute -bottom-8 -right-2 font-heading text-[18rem] font-normal italic leading-none text-white/[0.05] select-none">
                     {siteConfig.shortName.charAt(0)}
                   </span>
                 </>
               )}
-              {/* Gradiente sutil só no rodapé pra legibilidade do nome */}
-              <div
-                aria-hidden
-                className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/55 to-transparent"
-              />
               {/* Plate com nome */}
-              <div className="absolute inset-x-6 bottom-6">
-                <p className="font-heading text-xl font-normal text-white drop-shadow-md">
+              <div className="absolute inset-x-8 bottom-8">
+                <p className="font-heading text-xl font-normal text-white">
                   {about.name}
                 </p>
-                <p className="text-[10px] uppercase tracking-[0.22em] text-white/75 mt-1">
+                <p className="mt-1.5 text-[10px] uppercase tracking-[0.22em] text-white/70">
                   {about.role}
                 </p>
               </div>
             </div>
 
-            {/* Hairline gold accent vertical */}
-            <span aria-hidden className="absolute -top-6 -left-6 hidden h-24 w-px bg-[color:var(--brand-gold)] sm:block" />
-
-            {/* Estatística abaixo da foto */}
             {about.stat ? (
-              <div className="mt-6 flex items-center gap-5 rounded-md border border-border/70 bg-card px-6 py-5 shadow-sm">
-                <p className="font-heading text-4xl font-normal text-[color:var(--brand-navy)]">
+              <div className="mt-8 flex items-baseline gap-6 border-t border-border pt-6">
+                <p className="font-heading text-4xl font-normal text-[color:var(--brand-black)]">
                   {about.stat.value}
                 </p>
-                <span className="h-10 w-px bg-border" />
                 <p className="text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
                   {about.stat.label}
                 </p>
@@ -89,35 +72,32 @@ export function About() {
               </p>
             </div>
 
-            <h2 className="reveal mt-6 font-heading text-3xl font-normal leading-tight text-[color:var(--brand-navy)] sm:text-4xl md:text-5xl text-balance">
+            <h2 className="reveal mt-8 font-heading text-3xl font-normal leading-tight text-[color:var(--brand-black)] sm:text-4xl md:text-5xl text-balance">
               {about.title}
             </h2>
 
-            <div className="mt-8 space-y-5 text-base leading-relaxed text-muted-foreground">
+            <div className="mt-10 space-y-5 text-base leading-relaxed text-muted-foreground">
               {about.bio.map((paragraph, i) => (
-                <p
-                  key={i}
-                  className={i === 0 ? "reveal has-dropcap text-pretty" : "reveal text-pretty"}
-                >
+                <p key={i} className="reveal text-pretty">
                   {paragraph}
                 </p>
               ))}
             </div>
 
-            <ul className="reveal mt-10 grid gap-x-8 gap-y-3 sm:grid-cols-2">
+            <ul className="reveal mt-12 grid gap-x-10 gap-y-4 sm:grid-cols-2">
               {about.credentials.map((c) => (
                 <li
                   key={c}
-                  className="flex items-start gap-3 border-t border-border/70 pt-3 text-sm text-foreground/80"
+                  className="flex items-start gap-3 text-sm text-foreground/80"
                 >
-                  <span className="mt-1 size-1.5 shrink-0 rounded-full bg-[color:var(--brand-gold)]" />
+                  <span className="mt-[7px] h-px w-4 shrink-0 bg-[color:var(--brand-gold)]" />
                   <span className="text-pretty">{c}</span>
                 </li>
               ))}
             </ul>
 
-            <div className="reveal mt-12">
-              <WhatsappButton label="Conversar com a equipe" />
+            <div className="reveal mt-14">
+              <WhatsappButton label="Conversar com o advogado" />
             </div>
           </div>
         </div>

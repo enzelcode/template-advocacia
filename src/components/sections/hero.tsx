@@ -14,60 +14,36 @@ export function Hero() {
     <section
       ref={ref}
       id="top"
-      className="relative isolate overflow-hidden bg-[color:var(--brand-navy)] pt-36 pb-24 text-[color:var(--primary-foreground)] sm:pt-44 sm:pb-32"
+      className="relative isolate overflow-hidden bg-[color:var(--brand-black)] pt-40 pb-20 text-[color:var(--primary-foreground)] sm:pt-48 sm:pb-28"
     >
-      {/* Pano de fundo: verde escuro com pillars + glow dourado */}
-      <div aria-hidden className="bg-pillars absolute inset-0 opacity-25" />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -top-40 right-[-20%] -z-10 size-[55rem] rounded-full bg-[color:var(--brand-gold)]/20 blur-[140px]"
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -bottom-32 -left-32 -z-10 size-[40rem] rounded-full bg-black/40 blur-[120px]"
-      />
-
-      {/* Balança da justiça: só em telas grandes (lg+) */}
-      <svg
-        aria-hidden
-        viewBox="0 0 200 200"
-        className="pointer-events-none absolute right-[-4%] top-1/2 hidden w-[34rem] -translate-y-1/2 text-[color:var(--brand-gold)]/15 lg:block xl:w-[40rem]"
-      >
-        <g fill="none" stroke="currentColor" strokeWidth="0.8">
-          <line x1="100" y1="20" x2="100" y2="180" />
-          <line x1="40" y1="40" x2="160" y2="40" />
-          <path d="M40 40 L20 95 Q40 110 60 95 Z" />
-          <path d="M160 40 L140 95 Q160 110 180 95 Z" />
-          <ellipse cx="100" cy="180" rx="40" ry="4" />
-        </g>
-      </svg>
-
-      <Container className="relative grid gap-14 lg:grid-cols-[1.5fr_1fr] lg:items-end">
-        <div>
-          <div className="flex items-center gap-4">
-            <span className="h-px w-12 bg-[color:var(--brand-gold)]" />
+      <Container className="relative">
+        <div className="mx-auto max-w-4xl text-center">
+          <div className="reveal flex items-center justify-center gap-4">
+            <span className="h-px w-10 bg-[color:var(--brand-gold)]" />
             <p className="text-[10px] font-medium uppercase tracking-[0.32em] text-[color:var(--brand-gold)] sm:text-[11px]">
               {hero.eyebrow}
             </p>
+            <span className="h-px w-10 bg-[color:var(--brand-gold)]" />
           </div>
 
-          <h1 className="mt-8 font-heading text-[2.8rem] font-normal leading-[1.05] text-white sm:text-6xl lg:text-[5.4rem] text-balance">
-            {hero.headline}{" "}
+          <h1 className="reveal mt-10 font-heading text-5xl font-normal leading-[1.02] text-white sm:text-6xl md:text-7xl lg:text-[6rem] text-balance">
+            {hero.headline}
+            <br />
             <span className="italic font-light text-[color:var(--brand-gold)]">
               {hero.headlineEmphasis}
             </span>
           </h1>
 
-          <p className="mt-8 max-w-xl text-base leading-relaxed text-white/75 sm:text-lg text-pretty">
+          <p className="reveal mx-auto mt-10 max-w-2xl text-base leading-relaxed text-white/65 sm:text-lg text-pretty">
             {hero.subheadline}
           </p>
 
-          <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
+          <div className="reveal mt-12 flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
             <WhatsappButton label={hero.ctaPrimary} tone="gold" />
             {hero.ctaSecondary ? (
               <Link
                 href="#areas"
-                className="group inline-flex items-center gap-3 text-sm font-medium text-white"
+                className="group inline-flex items-center gap-3 text-sm font-medium text-white/85 transition-colors hover:text-white"
               >
                 <span className="relative">
                   {hero.ctaSecondary}
@@ -79,25 +55,29 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Coluna direita: stats (sem balança no mobile) */}
-        <div className="lg:pb-4">
-          <dl className="grid grid-cols-3 gap-6 border-y border-white/15 py-6 lg:grid-cols-1 lg:gap-0 lg:divide-y lg:divide-white/15 lg:border-x-0 lg:border-y-0 lg:py-0">
+        {/* Rodapé do hero: stats + OAB. Linha fina dourada sutil. */}
+        <div className="reveal mt-24 sm:mt-32">
+          <div aria-hidden className="mx-auto h-px w-full max-w-5xl bg-white/10" />
+          <dl className="mx-auto mt-10 grid max-w-5xl grid-cols-2 gap-x-8 gap-y-8 sm:grid-cols-4 sm:gap-y-0">
             {hero.stats.map((s) => (
-              <div key={s.label} className="text-left lg:py-6">
-                <dt className="font-heading text-3xl font-normal text-white sm:text-4xl lg:text-5xl">
+              <div key={s.label} className="text-center">
+                <dt className="font-heading text-3xl font-normal text-white sm:text-4xl">
                   {s.value}
                 </dt>
-                <dd className="mt-1.5 text-[10px] uppercase tracking-[0.2em] text-white/55 sm:text-[11px]">
+                <dd className="mt-2 text-[10px] uppercase tracking-[0.22em] text-white/50">
                   {s.label}
                 </dd>
               </div>
             ))}
+            <div className="text-center">
+              <dt className="font-heading text-3xl font-normal text-[color:var(--brand-gold)] sm:text-4xl">
+                ∗
+              </dt>
+              <dd className="mt-2 text-[10px] uppercase tracking-[0.22em] text-white/50">
+                {oab}
+              </dd>
+            </div>
           </dl>
-
-          <p className="mt-8 flex items-center gap-3 text-[10px] uppercase tracking-[0.3em] text-white/55">
-            <span className="h-px w-8 bg-[color:var(--brand-gold)]" />
-            {oab}
-          </p>
         </div>
       </Container>
     </section>

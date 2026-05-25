@@ -24,10 +24,9 @@ export function Footer() {
   const { social, contact } = siteConfig;
 
   return (
-    <footer className="relative border-t border-border/70 bg-background">
-      <div aria-hidden className="bg-dots absolute inset-0 opacity-30" />
-      <Container className="relative py-16">
-        <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
+    <footer className="relative border-t border-border bg-background">
+      <Container className="relative py-20">
+        <div className="grid gap-14 md:grid-cols-[1.4fr_1fr_1fr]">
           {/* Brand */}
           <div>
             {siteConfig.logo ? (

@@ -19,46 +19,35 @@ export function Process() {
             </p>
             <span className="h-px w-10 bg-[color:var(--brand-gold)]" />
           </div>
-          <h2 className="reveal mt-6 font-heading text-3xl font-normal leading-tight text-[color:var(--brand-navy)] sm:text-5xl text-balance">
+          <h2 className="reveal mt-8 font-heading text-3xl font-normal leading-tight text-[color:var(--brand-black)] sm:text-5xl text-balance">
             Do primeiro contato à{" "}
             <span className="italic font-light">solução</span>.
           </h2>
-          <p className="reveal mt-5 text-base text-muted-foreground text-pretty">
-            Cada etapa é explicada com clareza, sem juridiquês e sem surpresas.
+          <p className="reveal mt-6 text-base text-muted-foreground text-pretty">
+            Cada etapa explicada com clareza, sem juridiquês e sem surpresas.
           </p>
         </div>
 
-        {/* Timeline horizontal com linha conectora */}
-        <ol className="relative mt-20 grid gap-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-0">
-          {/* Linha conectora (só em lg+) */}
+        <ol className="relative mt-24 grid gap-16 sm:grid-cols-2 lg:grid-cols-4 lg:gap-0">
+          {/* Linha conectora discreta (só em lg+) */}
           <div
             aria-hidden
-            className="pointer-events-none absolute left-0 right-0 top-7 hidden h-px lg:block"
-            style={{
-              backgroundImage:
-                "linear-gradient(to right, transparent 0, color-mix(in oklch, var(--foreground) 15%, transparent) 8%, color-mix(in oklch, var(--foreground) 15%, transparent) 92%, transparent 100%)",
-            }}
+            className="pointer-events-none absolute left-0 right-0 top-3 hidden h-px bg-border lg:block"
           />
 
-          {steps.map((step, i) => (
-            <li key={step.step} className="reveal relative lg:px-6">
-              {/* Marcador circular */}
-              <div className="relative z-10 inline-flex">
-                <span className="grid size-14 place-items-center rounded-full border border-border bg-background font-heading text-base text-[color:var(--brand-navy)] shadow-sm">
+          {steps.map((step) => (
+            <li key={step.step} className="reveal relative lg:px-8">
+              <div className="relative z-10 inline-flex items-center gap-3 bg-background pr-4 lg:pr-6">
+                <span className="size-1.5 rounded-full bg-[color:var(--brand-gold)]" />
+                <span className="font-heading text-sm font-medium tracking-[0.2em] text-[color:var(--brand-gold)]">
                   {step.step}
                 </span>
-                {i === 0 ? (
-                  <span
-                    aria-hidden
-                    className="absolute inset-0 -m-1 rounded-full ring-1 ring-[color:var(--brand-gold)]/40"
-                  />
-                ) : null}
               </div>
 
-              <h3 className="mt-8 font-heading text-xl font-normal text-[color:var(--brand-navy)]">
+              <h3 className="mt-8 font-heading text-xl font-normal text-[color:var(--brand-black)]">
                 {step.title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground text-pretty">
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground text-pretty">
                 {step.description}
               </p>
             </li>
