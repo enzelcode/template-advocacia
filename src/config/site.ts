@@ -108,8 +108,12 @@ export const siteConfig: SiteConfig = {
     "Escritório de advocacia comprometido com ética, transparência e excelência. Atendimento personalizado e atuação estratégica em múltiplas áreas do direito.",
   url: "https://template-advocacia-git-allan-reis.vercel.app",
 
-  // Sem arquivo de logo ainda — header e footer renderizam a marca inline
-  // (monograma "AR" derivado do shortName).
+  logo: {
+    src: "/ar.png",
+    width: 1034,
+    height: 287,
+    alt: "Allan Reis Advocacia",
+  },
 
   contact: {
     phone: "(44) 99740-4433",

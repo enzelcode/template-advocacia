@@ -52,27 +52,27 @@
   /* Paleta Allan Reis: branco + verde escuro premium + dourado em detalhes. */
   /* Nota: --brand-navy/--brand-black são mantidos por compat com componentes do template, mas aqui ambos apontam pro verde escuro. */
   --background: #ffffff;
-  --foreground: #0e1f18;
+  --foreground: #102822;
   --card: #ffffff;
-  --card-foreground: #0e1f18;
+  --card-foreground: #102822;
   --popover: #ffffff;
-  --popover-foreground: #0e1f18;
-  --primary: #14342b;
+  --popover-foreground: #102822;
+  --primary: #1b4332;
   --primary-foreground: #ffffff;
   --secondary: #eef3ef;
-  --secondary-foreground: #14342b;
+  --secondary-foreground: #1b4332;
   --muted: #eef3ef;
   --muted-foreground: #5a6b62;
   --accent: #c9a04e;
-  --accent-foreground: #14342b;
+  --accent-foreground: #1b4332;
   --destructive: oklch(0.577 0.245 27.325);
   --border: #dde5df;
   --input: #dde5df;
   --ring: #c9a04e;
   --brand-gold: #c9a04e;
-  --brand-navy: #14342b;
-  --brand-black: #14342b;
-  --brand-green: #14342b;
+  --brand-navy: #1b4332;
+  --brand-black: #1b4332;
+  --brand-green: #1b4332;
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
   --chart-3: oklch(0.439 0 0);

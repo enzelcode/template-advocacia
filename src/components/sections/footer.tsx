@@ -35,7 +35,7 @@ export function Footer() {
                 alt={siteConfig.logo.alt}
                 width={siteConfig.logo.width}
                 height={siteConfig.logo.height}
-                className="h-28 w-auto"
+                className="h-16 w-auto"
               />
             ) : (
               <BrandMark size="lg" />
