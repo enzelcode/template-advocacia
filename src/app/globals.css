@@ -49,30 +49,31 @@
 }
 
 :root {
-  /* Paleta Allan Reis: branco + verde escuro premium + dourado em detalhes. */
-  /* Nota: --brand-navy/--brand-black são mantidos por compat com componentes do template, mas aqui ambos apontam pro verde escuro. */
+  /* Paleta Eldo Alves: branco + preto profundo + dourado quente + acento vermelho. */
+  /* Nota: --brand-navy/--brand-green são mantidos por compat com componentes do template, todos apontam pro preto. */
   --background: #ffffff;
-  --foreground: #102822;
+  --foreground: #0a0a0a;
   --card: #ffffff;
-  --card-foreground: #102822;
+  --card-foreground: #0a0a0a;
   --popover: #ffffff;
-  --popover-foreground: #102822;
-  --primary: #1b4332;
+  --popover-foreground: #0a0a0a;
+  --primary: #0a0a0a;
   --primary-foreground: #ffffff;
-  --secondary: #eef3ef;
-  --secondary-foreground: #1b4332;
-  --muted: #eef3ef;
-  --muted-foreground: #5a6b62;
+  --secondary: #f4f3ee;
+  --secondary-foreground: #0a0a0a;
+  --muted: #f4f3ee;
+  --muted-foreground: #5b5953;
   --accent: #c9a04e;
-  --accent-foreground: #1b4332;
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: #dde5df;
-  --input: #dde5df;
+  --accent-foreground: #0a0a0a;
+  --destructive: #b91c1c;
+  --border: #e6e3da;
+  --input: #e6e3da;
   --ring: #c9a04e;
   --brand-gold: #c9a04e;
-  --brand-navy: #1b4332;
-  --brand-black: #1b4332;
-  --brand-green: #1b4332;
+  --brand-navy: #0a0a0a;
+  --brand-black: #0a0a0a;
+  --brand-green: #0a0a0a;
+  --brand-red: #b91c1c;
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
   --chart-3: oklch(0.439 0 0);

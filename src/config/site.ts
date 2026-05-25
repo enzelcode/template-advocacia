@@ -1,8 +1,8 @@
 /**
  * Configuração do site — TUDO que muda por cliente fica aqui.
  *
- * Branch: allan-reis
- * Cliente: Advogado Allan Reis (Advocacia · Maringá-PR)
+ * Branch: eldo-alves
+ * Cliente: Advogado Eldo Alves (Pará — OAB/PA 39.271)
  */
 
 export type PracticeArea = {
@@ -100,40 +100,38 @@ export type SiteConfig = {
 };
 
 export const siteConfig: SiteConfig = {
-  name: "Allan Reis Advocacia",
-  shortName: "Allan Reis",
-  oab: "OAB/PR 00.000", // ← preencher com OAB real
-  tagline: "Defesa dos seus direitos com ética e excelência",
+  name: "Eldo Alves Advocacia",
+  shortName: "Eldo Alves",
+  oab: "OAB/PA 39.271",
+  tagline: "Advogado · OAB/PA 39.271",
   description:
-    "Escritório de advocacia comprometido com ética, transparência e excelência. Atendimento personalizado e atuação estratégica em múltiplas áreas do direito.",
-  url: "https://template-advocacia-git-allan-reis.vercel.app",
+    "Advocacia comprometida com a defesa dos seus direitos. Atendimento personalizado, análise técnica e atuação estratégica em múltiplas áreas do direito.",
+  url: "https://template-advocacia-git-eldo-alves.vercel.app",
 
-  logo: {
-    src: "/ar.png",
-    width: 1034,
-    height: 287,
-    alt: "Allan Reis Advocacia",
-  },
+  // Quando tiver o eldo.png, basta configurar siteConfig.logo apontando pra ele
+  // (igual foi feito com ar.png na branch allan-reis). Por enquanto, header e
+  // footer renderizam a marca inline (monograma "EA" derivado do shortName).
 
   contact: {
-    phone: "(44) 99740-4433",
-    whatsapp: "5544997404433",
+    phone: "(91) 98375-7599 / (94) 99141-9118",
+    whatsapp: "5591983757599",
     whatsappMessage:
-      "Olá, Dr. Allan. Vim pelo site e gostaria de uma análise do meu caso.",
-    email: "contato@allanreisadvocacia.com.br", // ← placeholder, preencher quando tiver
-    address: "Maringá · PR",
+      "Olá, Dr. Eldo. Vim pelo site e gostaria de uma análise do meu caso.",
+    email: "adv.eldoalves@gmail.com",
+    address: "Belém · PA",
   },
 
   social: {
-    instagram: "https://www.instagram.com/advocacia.allanreis/",
+    instagram: "https://www.instagram.com/adv.eldo_alves/",
+    facebook: "https://www.facebook.com/eldo.alves",
   },
 
   hero: {
-    eyebrow: "Allan Reis · Advocacia",
+    eyebrow: "Eldo Alves · Advogado",
     headline: "Defesa dos seus direitos",
-    headlineEmphasis: "com ética e excelência.",
+    headlineEmphasis: "com técnica e dedicação.",
     subheadline:
-      "Atendimento personalizado e atuação estratégica em múltiplas áreas do direito. Ética, transparência e excelência na prestação de serviços jurídicos.",
+      "Atendimento personalizado e atuação estratégica em múltiplas áreas do direito. Análise técnica rigorosa, transparência e contato direto com o advogado.",
     ctaPrimary: "Falar com o advogado",
     ctaSecondary: "Áreas de atuação",
     stats: [
@@ -143,23 +141,22 @@ export const siteConfig: SiteConfig = {
     ],
   },
 
-  // Os 3 pilares da marca do Allan: Ética, Confiança, Dedicação
   highlights: [
     {
       icon: "ShieldCheck",
-      title: "Ética",
+      title: "Ética e sigilo",
       description:
         "Atuação pautada pelo Código de Ética da OAB, com sigilo absoluto e transparência total em todas as etapas do caso.",
     },
     {
       icon: "HeartHandshake",
-      title: "Confiança",
+      title: "Atendimento personalizado",
       description:
-        "Atendimento personalizado e contato direto com o advogado. Você sabe o que esperar em cada movimento.",
+        "Contato direto com o advogado em todas as etapas. Linguagem acessível e estratégia desenhada caso a caso.",
     },
     {
       icon: "Target",
-      title: "Dedicação",
+      title: "Dedicação e resultados",
       description:
         "Análise técnica rigorosa e busca constante pela melhor defesa dos seus direitos. Sem juridiquês, sem promessa vazia.",
     },
@@ -167,20 +164,19 @@ export const siteConfig: SiteConfig = {
 
   about: {
     eyebrow: "Sobre o escritório",
-    title: "Defendendo seus direitos com excelência.",
-    name: "Dr. Allan Reis",
-    role: "Advogado — OAB/PR 00.000",
-    // Sem foto ainda → seção Sobre renderiza placeholder com monograma "AR".
+    title: "Defendendo seus direitos com técnica e dedicação.",
+    name: "Dr. Eldo Alves",
+    role: "Advogado — OAB/PA 39.271",
     photo: undefined,
     bio: [
-      "Allan Reis Advocacia é um escritório comprometido com ética, transparência e excelência na prestação de serviços jurídicos. Bacharel em Direito pela Unicesumar desde 2018, atuo com dedicação e compromisso desde o início da minha trajetória na advocacia.",
-      "Meu compromisso é oferecer soluções jurídicas eficazes e personalizadas, sempre buscando a melhor defesa para os seus direitos.",
+      "Eldo Alves Advocacia atua com dedicação e compromisso na defesa dos direitos dos seus clientes — com análise técnica rigorosa e atendimento personalizado em cada caso.",
+      "Meu compromisso é oferecer soluções jurídicas eficazes, sempre buscando a melhor estratégia pra proteger os seus direitos. Transparência sobre prazos e cenários reais em cada etapa.",
     ],
     credentials: [
-      "Bacharel em Direito · Unicesumar (2018)",
-      "Atuação contínua na defesa de direitos",
+      "OAB/PA 39.271 — atuação regular",
       "Atendimento personalizado e direto",
-      "Ética, transparência e excelência",
+      "Análise técnica rigorosa de cada caso",
+      "Ética, transparência e dedicação",
     ],
     stat: { value: "100%", label: "Atendimento personalizado" },
   },
@@ -277,7 +273,7 @@ export const siteConfig: SiteConfig = {
       role: "Direito Criminal",
       initials: "CL",
       quote:
-        "Defesa técnica impecável. Senti segurança e clareza em todas as audiências — o Dr. Allan realmente domina o que faz.",
+        "Defesa técnica impecável. Senti segurança e clareza em todas as audiências — o Dr. Eldo realmente domina o que faz.",
     },
   ],
 
@@ -300,7 +296,7 @@ export const siteConfig: SiteConfig = {
     {
       question: "Atende presencial ou só online?",
       answer:
-        "Atendo das duas formas. Consultas podem ser totalmente online por videochamada e WhatsApp, ou presenciais em Maringá-PR mediante agendamento.",
+        "Atendo das duas formas. Consultas podem ser totalmente online por videochamada e WhatsApp, ou presenciais no Pará mediante agendamento.",
     },
     {
       question: "Em quanto tempo o caso anda?",
