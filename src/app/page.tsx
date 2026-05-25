@@ -1,5 +1,6 @@
 import { Header } from "@/components/sections/header";
 import { Hero } from "@/components/sections/hero";
+import { Marquee } from "@/components/sections/marquee";
 import { Highlights } from "@/components/sections/highlights";
 import { About } from "@/components/sections/about";
 import { PracticeAreas } from "@/components/sections/practice-areas";
@@ -16,9 +17,10 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <Hero />
-        <Highlights />
-        <About />
+        <Marquee />
         <PracticeAreas />
+        <About />
+        <Highlights />
         <Process />
         <Testimonials />
         <Faq />
