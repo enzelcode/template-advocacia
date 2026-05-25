@@ -1,8 +1,8 @@
 /**
  * Configuração do site — TUDO que muda por cliente fica aqui.
  *
- * Branch: jonathan-lopes
- * Cliente: Advogado Jonathan Lopes (Direito do Empregado)
+ * Branch: ricardo-almeida
+ * Cliente: Advogado Ricardo Almeida (Advocacia e Assessoria Jurídica)
  */
 
 export type PracticeArea = {
@@ -100,42 +100,39 @@ export type SiteConfig = {
 };
 
 export const siteConfig: SiteConfig = {
-  name: "Jonathan Lopes Advocacia",
-  shortName: "Jonathan Lopes",
-  oab: "OAB/DF 00.000", // ← preencher com OAB real
-  tagline: "Especialista em Direito do Empregado",
+  name: "Ricardo Almeida Advocacia",
+  shortName: "Ricardo Almeida",
+  oab: "OAB/SP 00.000", // ← preencher com OAB real
+  tagline: "Advocacia e Assessoria Jurídica",
   description:
-    "Advocacia trabalhista especializada em direito do empregado — verbas, horas extras, assédio e reconhecimento de vínculo. Análise técnica e atendimento humanizado.",
-  url: "https://template-advocacia-git-jonathan-lopes.vercel.app",
+    "Advocacia estratégica e personalizada — Direito Criminal, Família, Sucessões, Previdenciário, Civil e Consultoria Jurídica. Análise técnica e atendimento humanizado.",
+  url: "https://template-advocacia-git-ricardo-almeida.vercel.app",
 
-  // Sem arquivo de logo — o header renderiza a marca inline (ícone de balança + serifa)
+  // Sem arquivo de logo ainda — o header renderiza a marca inline (monograma RA + nome serifado)
 
   contact: {
-    phone: "(61) 8652-1233",
-    whatsapp:
-      "https://api.whatsapp.com/message/2GKIBEWLKGXEB1?autoload=1&app_absent=0",
+    phone: "(11) 9 6535-2425",
+    whatsapp: "5511965352425",
     whatsappMessage:
-      "Olá, Dr. Jonathan. Vim pelo site e gostaria de tirar uma dúvida trabalhista.",
-    email: "jonathan.rodrigo_df@hotmail.com",
-    address: "Brasília · DF",
+      "Olá, Dr. Ricardo. Vim pelo site e gostaria de uma análise do meu caso.",
+    email: "drricardoalmeidaadv@gmail.com",
+    address: "São Paulo · SP",
   },
 
   social: {
-    instagram: "https://www.instagram.com/jonathanroodrigo/",
-    facebook: "https://www.facebook.com/adv.jonathanrodrigo",
-    linkedin: "https://www.linkedin.com/in/jonathan-lopes-799551236",
+    instagram: "https://www.instagram.com/adv.ricardoalmeida/",
   },
 
   hero: {
-    eyebrow: "Jonathan Lopes · Direito do Empregado",
-    headline: "Conhecer seus direitos",
-    headlineEmphasis: "faz toda a diferença.",
+    eyebrow: "Ricardo Almeida · Advocacia & Assessoria Jurídica",
+    headline: "Seu direito,",
+    headlineEmphasis: "nossa missão.",
     subheadline:
-      "Análise técnica de contratos e verbas trabalhistas, defesa do empregado e orientação jurídica segura — pra você receber o que é seu por direito.",
+      "Atuação estratégica e personalizada para proteger os seus direitos. Direito Criminal, Família, Previdenciário e mais — análise técnica e atendimento humanizado.",
     ctaPrimary: "Falar com o advogado",
     ctaSecondary: "Áreas de atuação",
     stats: [
-      { value: "100%", label: "Foco em trabalhista" },
+      { value: "6", label: "Áreas de atuação" },
       { value: "Online", label: "Atendimento em todo Brasil" },
       { value: "24h", label: "Resposta no WhatsApp" },
     ],
@@ -143,84 +140,85 @@ export const siteConfig: SiteConfig = {
 
   highlights: [
     {
-      icon: "Scale",
-      title: "Análise técnica segura",
+      icon: "HeartHandshake",
+      title: "Atendimento humanizado e transparente",
       description:
-        "Cada caso é estudado a fundo antes de qualquer estratégia. Você recebe um parecer claro sobre viabilidade e prazos.",
+        "Escuta atenta, linguagem acessível e contato direto com o advogado em todas as etapas. Sem juridiquês, sem promessa vazia.",
     },
     {
-      icon: "Handshake",
-      title: "Atendimento humanizado",
+      icon: "Target",
+      title: "Foco em resultados",
       description:
-        "Linguagem acessível, escuta atenta e contato direto com o advogado. Sem juridiquês e sem promessas vazias.",
+        "Estratégia desenhada caso a caso, com objetivos claros e prazos honestos. Você sabe o que esperar em cada movimento.",
     },
     {
-      icon: "ShieldCheck",
-      title: "Sigilo e ética",
+      icon: "Compass",
+      title: "Análise técnica e estratégica",
       description:
-        "Atuação pautada pelo Código de Ética da OAB, com sigilo absoluto sobre todas as informações compartilhadas.",
+        "Cada caso é estudado a fundo antes de qualquer ação. Compromisso, técnica e ética em cada detalhe do seu caso.",
     },
   ],
 
   about: {
     eyebrow: "Sobre o escritório",
-    title: "Defesa técnica de quem trabalha — com presença e estratégia.",
-    name: "Dr. Jonathan Lopes",
-    role: "Advogado — OAB/DF 00.000",
-    photo: "/j.png",
+    title: "Cada cliente é único. Cada direito será respeitado.",
+    name: "Dr. Ricardo Almeida",
+    role: "Advogado — OAB/SP 00.000",
+    // Sem foto ainda → seção Sobre renderiza placeholder com a inicial.
+    photo: undefined,
     bio: [
-      "Jonathan Lopes Advocacia atua exclusivamente em Direito do Trabalho, com foco na defesa de empregados que tiveram seus direitos violados — seja por verbas não pagas, demissão indevida, assédio moral ou trabalho sem registro.",
-      "Cada caso é conduzido com análise técnica rigorosa, transparência sobre prazos e probabilidades reais. Você sabe o que esperar em cada etapa, sem juridiquês.",
+      "Prazer, Ricardo Almeida. Atuo na advocacia com foco em soluções estratégicas, sempre buscando o melhor resultado pra cada cliente.",
+      "Compromisso, técnica e ética em cada detalhe do seu caso. Cada caso é único e merece uma análise especializada — defendendo seus direitos hoje, garantindo o seu amanhã.",
     ],
     credentials: [
-      "Especialização em Direito do Trabalho",
-      "Atuação em rescisões indiretas e horas extras",
-      "Análise de contratos e verbas trabalhistas",
-      "Defesa em casos de assédio moral",
+      "Direito Criminal e estratégia de defesa",
+      "Direito de Família e Sucessões",
+      "Direito Previdenciário e Civil",
+      "Assessoria e Consultoria Jurídica",
     ],
-    stat: { value: "100%", label: "Atuação trabalhista" },
+    stat: { value: "6", label: "Áreas de atuação" },
   },
 
   practiceAreas: [
     {
-      id: "empregado",
-      label: "Empregado",
+      id: "atuacao",
+      label: "Áreas",
       areas: [
         {
-          icon: "Briefcase",
-          title: "Verbas Rescisórias",
-          description:
-            "Cobrança de aviso prévio, férias, 13º, FGTS, multa e tudo o que é seu por direito após a demissão.",
-        },
-        {
-          icon: "Clock",
-          title: "Horas Extras",
-          description:
-            "Horas extras, adicional noturno, intervalos não respeitados e jornada excessiva — com cálculos detalhados.",
-        },
-        {
-          icon: "FileX",
-          title: "Trabalho Sem Registro",
-          description:
-            "Reconhecimento de vínculo empregatício e cobrança retroativa de todas as verbas devidas pelo período.",
-        },
-        {
-          icon: "ShieldAlert",
-          title: "Assédio Moral",
-          description:
-            "Indenização por danos morais em casos de humilhação, perseguição ou sobrecarga abusiva no trabalho.",
-        },
-        {
           icon: "Gavel",
-          title: "Rescisão Indireta",
+          title: "Direito Criminal",
           description:
-            "Quando a empresa comete falta grave, você pode pedir rescisão e receber todas as verbas como demissão sem justa causa.",
+            "Defesa técnica e estratégia em todas as fases do processo — investigação, audiências, recursos e tribunal do júri.",
         },
         {
-          icon: "AlertTriangle",
-          title: "Adicionais e Periculosidade",
+          icon: "Heart",
+          title: "Direito de Família",
           description:
-            "Insalubridade, periculosidade e demais adicionais não pagos durante o vínculo empregatício.",
+            "Soluções jurídicas para proteger o que mais importa: divórcio, guarda, pensão alimentícia e regulamentação de visitas.",
+        },
+        {
+          icon: "ScrollText",
+          title: "Direito de Família e Sucessões",
+          description:
+            "Planejamento sucessório, inventários, partilhas e testamentos — com cuidado, sigilo e segurança jurídica.",
+        },
+        {
+          icon: "Landmark",
+          title: "Direito Previdenciário",
+          description:
+            "Aposentadorias, benefícios e revisões com análise técnica especializada para você receber o que é seu por direito.",
+        },
+        {
+          icon: "Scale",
+          title: "Direito Civil",
+          description:
+            "Contratos, indenizações, obrigações e demais demandas cíveis — análise rigorosa antes de qualquer movimento.",
+        },
+        {
+          icon: "Briefcase",
+          title: "Assessoria e Consultoria Jurídica",
+          description:
+            "Prevenção de conflitos e segurança jurídica para pessoas e empresas — assessoria contínua ou pontual.",
         },
       ],
     },
@@ -231,7 +229,7 @@ export const siteConfig: SiteConfig = {
       step: "01",
       title: "Primeiro contato",
       description:
-        "Você nos chama pelo WhatsApp e descreve resumidamente sua situação. Confirmamos disponibilidade.",
+        "Você nos chama pelo WhatsApp ou formulário e descreve resumidamente sua situação. Confirmamos disponibilidade.",
     },
     {
       step: "02",
@@ -256,52 +254,57 @@ export const siteConfig: SiteConfig = {
   testimonials: [
     {
       name: "Cliente",
-      role: "Verbas rescisórias",
+      role: "Direito de Família",
       initials: "CL",
       quote:
-        "Atendimento atencioso desde o primeiro contato. Recebi todas as verbas que a empresa não tinha pago e o Dr. Jonathan explicou tudo com clareza.",
+        "Profissional sério, ético e que escuta de verdade. Resolveu meu divórcio com tranquilidade e respeito em todas as etapas.",
     },
     {
       name: "Cliente",
-      role: "Reconhecimento de vínculo",
+      role: "Direito Previdenciário",
       initials: "CL",
       quote:
-        "Trabalhei como autônomo por anos, mas era empregado de verdade. O escritório conseguiu o reconhecimento do vínculo e todas as verbas retroativas.",
+        "Tive minha aposentadoria revisada e recebi atrasados que nem sabia que tinha direito. Atendimento claro do começo ao fim.",
     },
     {
       name: "Cliente",
-      role: "Assédio moral",
+      role: "Direito Criminal",
       initials: "CL",
       quote:
-        "Profissional sério, ético e que escuta de verdade. Me senti respeitada durante todo o processo.",
+        "Defesa técnica impecável. Senti segurança e clareza em todas as audiências — o Dr. Ricardo realmente domina o que faz.",
     },
   ],
 
   faq: [
     {
-      question: "Qual o prazo para entrar com uma ação trabalhista?",
+      question: "Quais áreas o escritório atua?",
       answer:
-        "O prazo é de até 2 anos após o término do contrato de trabalho. Dentro desse período, é possível cobrar valores referentes aos últimos 5 anos. Por isso, agir rápido faz diferença.",
+        "Direito Criminal, Família, Família e Sucessões, Previdenciário, Civil, além de Assessoria e Consultoria Jurídica para pessoas e empresas. Se o seu caso não se encaixa em nenhuma delas, dá pra avaliar na análise inicial.",
     },
     {
-      question: "A primeira consulta é gratuita?",
+      question: "Como funciona a primeira consulta?",
       answer:
-        "Sim. A análise inicial do seu caso é gratuita e sem compromisso. Você apresenta a situação, avaliamos a viabilidade e só seguimos se fizer sentido.",
+        "A análise inicial do seu caso é gratuita e sem compromisso. Você apresenta a situação, avaliamos a viabilidade jurídica e só seguimos juntos se fizer sentido pra você.",
     },
     {
-      question: "Quanto custa contratar o escritório?",
+      question: "Como são cobrados os honorários?",
       answer:
-        "Em ações trabalhistas geralmente trabalhamos com honorários ad exitum — você só paga se ganhar a causa, com um percentual combinado por escrito antes de iniciar.",
-    },
-    {
-      question: "Quanto tempo demora um processo trabalhista?",
-      answer:
-        "Depende da complexidade e da Vara, mas processos trabalhistas levam em média de 8 a 18 meses. Apresentamos uma estimativa realista na análise inicial.",
+        "Depende da área e do caso — pode ser honorário fixo, parcelado ou por êxito (você só paga se ganhar). Tudo é combinado por escrito antes de iniciar o trabalho.",
     },
     {
       question: "Atende presencial ou só online?",
       answer:
-        "Atendo das duas formas. Consultas podem ser totalmente online por videochamada e WhatsApp, ou presenciais em Brasília quando preferir.",
+        "Atendo das duas formas. Consultas podem ser totalmente online por videochamada e WhatsApp, ou presenciais em São Paulo mediante agendamento.",
+    },
+    {
+      question: "Em quanto tempo o caso anda?",
+      answer:
+        "Depende da área e da complexidade. Apresentamos uma estimativa realista de prazos na análise inicial — sem promessa vazia.",
+    },
+    {
+      question: "Posso falar diretamente com o advogado?",
+      answer:
+        "Sim. O contato é direto com o Dr. Ricardo em todas as etapas, com atualizações periódicas e canal aberto pra dúvidas pelo WhatsApp.",
     },
   ],
 };

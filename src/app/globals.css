@@ -49,27 +49,29 @@
 }
 
 :root {
-  /* Paleta Jonathan Lopes: azul marinho clássico + dourado + branco + cinzas frios. */
+  /* Paleta Ricardo Almeida: branco + preto + dourado quente. */
+  /* Nota: --brand-navy é mantido por compat com componentes do template, mas aqui é preto profundo. */
   --background: #ffffff;
-  --foreground: #0d1a2e;
+  --foreground: #0a0a0a;
   --card: #ffffff;
-  --card-foreground: #0d1a2e;
+  --card-foreground: #0a0a0a;
   --popover: #ffffff;
-  --popover-foreground: #0d1a2e;
-  --primary: #0d2240;
+  --popover-foreground: #0a0a0a;
+  --primary: #0a0a0a;
   --primary-foreground: #ffffff;
-  --secondary: #f1f3f8;
-  --secondary-foreground: #0d2240;
-  --muted: #f1f3f8;
-  --muted-foreground: #5a657a;
-  --accent: #c8a85c;
-  --accent-foreground: #0d2240;
+  --secondary: #f4f3ee;
+  --secondary-foreground: #0a0a0a;
+  --muted: #f4f3ee;
+  --muted-foreground: #5b5953;
+  --accent: #c9a04e;
+  --accent-foreground: #0a0a0a;
   --destructive: oklch(0.577 0.245 27.325);
-  --border: #dde2ec;
-  --input: #dde2ec;
-  --ring: #c8a85c;
-  --brand-gold: #c8a85c;
-  --brand-navy: #0d2240;
+  --border: #e6e3da;
+  --input: #e6e3da;
+  --ring: #c9a04e;
+  --brand-gold: #c9a04e;
+  --brand-navy: #0a0a0a;
+  --brand-black: #0a0a0a;
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
   --chart-3: oklch(0.439 0 0);
