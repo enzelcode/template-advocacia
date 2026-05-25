@@ -72,7 +72,12 @@ export function Header() {
                 width={siteConfig.logo.width}
                 height={siteConfig.logo.height}
                 priority
-                className="h-16 w-auto sm:h-20"
+                className={cn(
+                  "h-16 w-auto transition duration-300 sm:h-20",
+                  // Sobre o hero preto (não scrolled / menu mobile aberto), inverte
+                  // a logo escura pra ficar legível em branco.
+                  (open || !scrolled) && "brightness-0 invert",
+                )}
               />
             ) : (
               <BrandMark variant={open || !scrolled ? "light" : "dark"} />

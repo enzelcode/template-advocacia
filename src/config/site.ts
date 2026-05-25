@@ -108,7 +108,12 @@ export const siteConfig: SiteConfig = {
     "Advocacia estratégica e personalizada — Direito Criminal, Família, Sucessões, Previdenciário, Civil e Consultoria Jurídica. Análise técnica e atendimento humanizado.",
   url: "https://template-advocacia-git-ricardo-almeida.vercel.app",
 
-  // Sem arquivo de logo ainda — o header renderiza a marca inline (monograma RA + nome serifado)
+  logo: {
+    src: "/ra.webp",
+    width: 1117,
+    height: 662,
+    alt: "Ricardo Almeida — Assessoria e Consultoria Jurídica",
+  },
 
   contact: {
     phone: "(11) 9 6535-2425",
