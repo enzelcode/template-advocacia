@@ -2,7 +2,7 @@ import { Globe2, Briefcase, MessageCircle, ShieldCheck } from "lucide-react";
 
 const items = [
   { icon: Globe2, label: "Atendimento em todo o Brasil" },
-  { icon: Briefcase, label: "6 áreas de atuação" },
+  { icon: Briefcase, label: "4 áreas de atuação" },
   { icon: MessageCircle, label: "Resposta rápida no WhatsApp" },
   { icon: ShieldCheck, label: "Sigilo e ética profissional" },
   { icon: Globe2, label: "Atendimento online ou presencial" },

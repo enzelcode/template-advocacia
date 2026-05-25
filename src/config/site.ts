@@ -103,14 +103,17 @@ export const siteConfig: SiteConfig = {
   name: "Eldo Alves Advocacia",
   shortName: "Eldo Alves",
   oab: "OAB/PA 39.271",
-  tagline: "Advogado · OAB/PA 39.271",
+  tagline: "Advocacia e Consultoria Jurídica",
   description:
-    "Advocacia comprometida com a defesa dos seus direitos. Atendimento personalizado, análise técnica e atuação estratégica em múltiplas áreas do direito.",
+    "Advocacia e Consultoria Jurídica em Belém-PA. Atuação em Ações Criminais, Problemas Trabalhistas, Questões Previdenciárias e Familiares/Contratos.",
   url: "https://template-advocacia-git-eldo-alves.vercel.app",
 
-  // Quando tiver o eldo.png, basta configurar siteConfig.logo apontando pra ele
-  // (igual foi feito com ar.png na branch allan-reis). Por enquanto, header e
-  // footer renderizam a marca inline (monograma "EA" derivado do shortName).
+  logo: {
+    src: "/eldo.png",
+    width: 817,
+    height: 552,
+    alt: "Eldo Alves Advocacia",
+  },
 
   contact: {
     phone: "(91) 98375-7599 / (94) 99141-9118",
@@ -135,7 +138,7 @@ export const siteConfig: SiteConfig = {
     ctaPrimary: "Falar com o advogado",
     ctaSecondary: "Áreas de atuação",
     stats: [
-      { value: "6", label: "Áreas de atuação" },
+      { value: "4", label: "Áreas de atuação" },
       { value: "Online", label: "Atendimento em todo Brasil" },
       { value: "24h", label: "Resposta no WhatsApp" },
     ],
@@ -188,39 +191,27 @@ export const siteConfig: SiteConfig = {
       areas: [
         {
           icon: "Gavel",
-          title: "Direito Criminal",
+          title: "Ações Criminais",
           description:
-            "Defesa técnica e estratégia em todas as fases do processo — investigação, audiências, recursos e tribunal do júri.",
-        },
-        {
-          icon: "Heart",
-          title: "Direito de Família",
-          description:
-            "Soluções jurídicas para proteger o que mais importa: divórcio, guarda, pensão alimentícia e regulamentação de visitas.",
-        },
-        {
-          icon: "ScrollText",
-          title: "Família e Sucessões",
-          description:
-            "Planejamento sucessório, inventários, partilhas e testamentos — com cuidado, sigilo e segurança jurídica.",
-        },
-        {
-          icon: "Landmark",
-          title: "Direito Previdenciário",
-          description:
-            "Aposentadorias, benefícios e revisões com análise técnica especializada para você receber o que é seu por direito.",
-        },
-        {
-          icon: "Scale",
-          title: "Direito Civil",
-          description:
-            "Contratos, indenizações, obrigações e demais demandas cíveis — análise rigorosa antes de qualquer movimento.",
+            "Defesa técnica e estratégia em todas as fases do processo criminal — investigação, audiências, recursos e tribunal do júri.",
         },
         {
           icon: "Briefcase",
-          title: "Consultoria Jurídica",
+          title: "Problemas Trabalhistas",
           description:
-            "Prevenção de conflitos e segurança jurídica para pessoas e empresas — assessoria contínua ou pontual.",
+            "Defesa dos direitos do trabalhador: rescisões, verbas, horas extras, assédio moral e reconhecimento de vínculo.",
+        },
+        {
+          icon: "Landmark",
+          title: "Questões Previdenciárias",
+          description:
+            "Aposentadorias, benefícios, auxílios e revisões com análise técnica especializada — pra você receber o que é seu por direito.",
+        },
+        {
+          icon: "Users",
+          title: "Questões Familiares / Contratos",
+          description:
+            "Divórcio, guarda, pensão, partilhas e inventários — somados a contratos cíveis com segurança jurídica.",
         },
       ],
     },
@@ -281,7 +272,7 @@ export const siteConfig: SiteConfig = {
     {
       question: "Quais áreas o escritório atua?",
       answer:
-        "Direito Criminal, Família, Família e Sucessões, Previdenciário, Civil e Consultoria Jurídica para pessoas e empresas. Se o seu caso não se encaixa em nenhuma delas, dá pra avaliar na análise inicial.",
+        "Ações Criminais, Problemas Trabalhistas, Questões Previdenciárias e Questões Familiares/Contratos. Se o seu caso não se encaixa em nenhuma delas, dá pra avaliar na análise inicial sem compromisso.",
     },
     {
       question: "Como funciona a primeira consulta?",

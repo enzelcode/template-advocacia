@@ -37,8 +37,8 @@ export function PracticeAreas() {
           </p>
         </div>
 
-        {/* Grid de cards reais */}
-        <div className="mt-16 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+        {/* Grid de cards reais — 4 áreas → 2x2 em desktop pra dar mais respiro */}
+        <div className="mt-16 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:gap-6">
           {areas.map((area, i) => (
             <article
               key={area.title}
